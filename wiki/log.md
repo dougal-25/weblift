@@ -164,3 +164,9 @@ Append-only. Most recent at bottom.
 - Doug: loved the animation but wanted the squiggly underline gone, the mark vertically centred, and a new ending — mark slides LEFT while "Web Lift" comes in from the RIGHT to form the full logo.
 - Removed `.brandanim__line` (markup + CSS + `ba-line-draw`). Wrapped mark in a `.brandanim__mark` group; added `.brandanim__word` `<text>` ("Web" #fff / "Lift" #57A6FF). New keyframes `ba-shift` (mark translateX 0→−100px) + `ba-word-in` (word fade + slide from +34px), both firing 46–62% after the fill. Loop bumped 6s→6.5s for the extra phase. viewBox 300→200 tall so the mark sits centred with the line gone. reduced-motion pins to the final lockup.
 - Verified both phases in browser (Playwright + WAAPI seek): centred draw frame and assembled lockup both correct, well-balanced.
+
+## [2026-06-02] infra | extracted to its own repo + renamed to WebLift
+- Project moved out of the dwcw monorepo into a standalone **private** GitHub repo: `douglaswoolfenden-byte/weblift`. Folder renamed `website_revamp_business` → `weblift`.
+- dwcw no longer tracks this project (added to dwcw root `.gitignore` under the "per-project repos" block, same pattern as thesoundcave). Wiki travels with the repo, still inside the Obsidian vault on disk.
+- Fresh git history (initial commit; old monorepo commits not carried over). gitleaks scan clean before first push. `.vercel` link untouched — CLI deploys still work.
+- Follow-up (not done): connect this GitHub repo to Vercel for git-based deploys if desired; currently deploys via `vercel deploy --prod` CLI.
