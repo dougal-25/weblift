@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Web Lift</title>
+  <meta name="description" content="Get in touch with Web Lift — tell us about your business and we'll send a free, no-pressure quote within one working day." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+  <div class="announce">
+    <span>🚀 Limited spots this month — one fixed price, no surprise bills.</span>
+    <span class="announce__rating"><span class="g">G</span><span class="o">o</span><span class="o2">o</span><span class="g2">g</span><span class="l">l</span><span class="e">e</span> <span class="stars">★★★★★</span> 4.9</span>
+  </div>
+  <header class="nav">
+    <a href="index.html" class="nav__logo" aria-label="Web Lift home"><img src="assets/logo.svg" alt="Web Lift" class="nav__logo-img" /></a>
+    <nav class="nav__links">
+      <a href="about.html">About</a><a href="pricing.html">Pricing</a><a href="portfolio.html">Our work</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="btn btn--royal">Get a Quote</a>
+    <button class="nav__burger" aria-label="Menu">☰</button>
+  </header>
+
+  <section class="phero phero--dark">
+    <h1 data-reveal>Speak to the <span class="draw draw--underline">team</span></h1>
+    <p data-reveal>Tell us about your business and we'll send a free, no-pressure quote — usually within one working day.</p>
+  </section>
+
+  <div class="contact-grid">
+    <div class="contact-call" data-reveal="left">
+      <h2>Drop us a line</h2>
+      <p>No call centres, no scripts. Email us about your business and we'll reply with a free, no-pressure quote.</p>
+      <p class="contact-call__num">hello@web-lift.co.uk</p>
+      <p style="opacity:.85">We reply within one working day, Mon–Fri.</p>
+      <hr />
+      <p>Prefer the form? Fill it in on the right and we'll be in touch.</p>
+    </div>
+
+    <div class="contact-form" data-reveal="right">
+      <h2>Send a message</h2>
+      <!-- Formspree endpoint — quote enquiries go to the inbox verified on form mlgvqpwb -->
+      <form action="https://formspree.io/f/mlgvqpwb" method="POST">
+        <input type="hidden" name="_subject" value="New quote request — Web Lift (contact page)" />
+        <div class="row"><input type="text" name="first_name" placeholder="First name" required /><input type="text" name="last_name" placeholder="Last name" /></div>
+        <div class="row"><input type="email" name="email" placeholder="Email address" required /><input type="tel" name="phone" placeholder="Phone number" /></div>
+        <input type="text" name="business" placeholder="Your business / current website (if any)" />
+        <textarea name="message" placeholder="What would you like to sort out?" rows="4"></textarea>
+        <button type="submit" class="btn btn--royal btn--lg btn--block">Get my free quote →</button>
+      </form>
+      <p style="font-size:var(--fs-small); color:var(--color-muted); margin-top:var(--space-3)">No spam, no pushy sales. We reply within one working day.</p>
+    </div>
+  </div>
+
+  <section class="contact-details">
+    <p><strong>Web Lift</strong> · Website redesigns for local businesses · London, UK</p>
+    <p>web-lift.co.uk · hello@web-lift.co.uk</p>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div><div class="footer__brand"><img src="assets/logo.svg" alt="Web Lift" class="footer__logo-img" /></div><p class="footer__tag">Done-for-you website redesigns for local businesses. One fixed price, no hassle.</p></div>
+      <div><h4>Pages</h4><ul><li><a href="about.html">About</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="portfolio.html">Our work</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="contact.html">Website redesign</a></li><li><a href="contact.html">New websites</a></li><li><a href="contact.html">Logos &amp; branding</a></li></ul></div>
+      <div><h4>Get in touch</h4><ul><li><a href="contact.html">Get a quote</a></li><li>web-lift.co.uk</li></ul></div>
+    </div>
+    <div class="wrap footer__bottom">© <span id="year"></span> Web Lift · web-lift.co.uk</div>
+  </footer>
+
+  <script src="js/reveal.js"></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Lift | Website Redesigns for Local Businesses</title>
+  <meta name="description" content="Done-for-you website redesigns for local businesses. One fixed price from £750. No jargon, no hassle — we make your website win you customers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+  <div class="announce">
+    <span>🚀 Limited spots this month — one fixed price, no surprise bills.</span>
+    <span class="announce__rating"><span class="g">G</span><span class="o">o</span><span class="o2">o</span><span class="g2">g</span><span class="l">l</span><span class="e">e</span> <span class="stars">★★★★★</span> 4.9</span>
+  </div>
+
+  <header class="nav">
+    <a href="index.html" class="nav__logo" aria-label="Web Lift home"><img src="assets/logo.svg" alt="Web Lift" class="nav__logo-img" /></a>
+    <nav class="nav__links">
+      <a href="about.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="portfolio.html">Our work</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="btn btn--royal">Get a Quote</a>
+    <button class="nav__burger" aria-label="Menu">☰</button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img class="avatar avatar--1" src="https://i.pravatar.cc/120?img=32" alt="" data-reveal="scale" />
+    <img class="avatar avatar--2" src="https://i.pravatar.cc/120?img=12" alt="" data-reveal="scale" />
+    <img class="avatar avatar--3" src="https://i.pravatar.cc/120?img=5" alt="" data-reveal="scale" />
+    <img class="avatar avatar--4" src="https://i.pravatar.cc/120?img=49" alt="" data-reveal="scale" />
+
+    <h1 class="hero__title" data-reveal>Take your website to the next level</h1>
+    <p class="hero__lead" data-reveal>Done-for-you website redesigns for local businesses <strong>from £750</strong> — no jargon, no hassle.</p>
+    <div class="hero__cta" data-reveal>
+      <a href="contact.html" class="btn btn--royal btn--lg">Get a Quote <span aria-hidden="true">→</span></a>
+      <a href="pricing.html" class="btn btn--ghost btn--lg">See Pricing</a>
+    </div>
+    <div class="hero__trust" data-reveal>
+      <span class="trust-google"><span class="g">G</span><span class="o">o</span><span class="o2">o</span><span class="g2">g</span><span class="l">l</span><span class="e">e</span></span>
+      <span class="stars">★★★★★</span> <strong>Rated 4.9/5</strong> <span class="muted">by local business owners</span>
+    </div>
+  </section>
+
+  <!-- What makes us different (moved directly under hero) -->
+  <section class="better wrap">
+    <h2 class="section-title" data-reveal>What makes us <span class="draw draw--underline">different</span></h2>
+    <div class="better__feature" data-reveal="scale">
+      <h3>No outsourcing, no call centres</h3>
+      <p>You deal with the small team that actually builds your site. No account managers, no jargon, no runaround.</p>
+    </div>
+    <div class="better__cols" data-stagger="0.12">
+      <div data-reveal><h4>Trades</h4><p>Plumbers, electricians, builders — get the phone ringing with a site that loads fast and shows your work.</p></div>
+      <div data-reveal><h4>Hospitality</h4><p>Cafes, restaurants, salons — menus, bookings and opening hours that are easy to find on a phone.</p></div>
+      <div data-reveal><h4>Clinics &amp; studios</h4><p>Gyms, dentists, therapists — let customers book or enquire in a couple of taps.</p></div>
+    </div>
+  </section>
+
+  <!-- Before/After slider (moved below 'What makes us different') -->
+  <section class="ba-section wrap">
+    <h2 class="section-title" data-reveal>See the <span class="draw draw--underline">difference</span></h2>
+    <div class="ba" id="ba" data-reveal="scale">
+      <img class="ba__img" src="assets/ba-after.png" alt="Modern website redesign — after" />
+      <span class="mock__tag mock__tag--new">After ✨</span>
+      <div class="ba__before" id="baBefore">
+        <img class="ba__img" src="assets/ba-before.png" alt="Dated website — before" />
+        <span class="mock__tag mock__tag--old">Before 😬</span>
+      </div>
+      <div class="ba__handle" id="baHandle"><span class="ba__grip">‹ ›</span></div>
+    </div>
+    <p class="ba__hint">← drag to see the difference →</p>
+  </section>
+
+  <div class="examples" data-stagger="0.12">
+    <div class="examples__card examples__card--1" data-reveal><span>Trades &amp; Builders</span></div>
+    <div class="examples__card examples__card--2" data-reveal><span>Cafes &amp; Hospitality</span></div>
+    <div class="examples__card examples__card--3" data-reveal><span>Gyms &amp; Studios</span></div>
+    <div class="examples__card examples__card--4" data-reveal><span>Clinics &amp; Salons</span></div>
+  </div>
+
+  <!-- USP cards -->
+  <section class="usp wrap">
+    <h2 class="section-title" data-reveal>Loved by business owners that <span class="draw draw--underline">hate DIY</span></h2>
+    <div class="usp__grid" data-stagger="0.12">
+      <article class="usp__card usp__card--dark" data-reveal>
+        <h3>Done for you</h3>
+        <p>You run your business — we handle the website end to end. No software to learn, no decisions to agonise over.</p>
+      </article>
+      <article class="usp__card usp__card--royal" data-reveal>
+        <h3>No templates</h3>
+        <p>Every site is built around your business, not stamped from a cookie-cutter theme everyone else uses.</p>
+      </article>
+      <article class="usp__card usp__card--white" data-reveal>
+        <h3>Built to win work</h3>
+        <p>Fast, mobile-first, easy to contact. Designed to turn visitors into calls, bookings and customers.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Alternating features -->
+  <section class="feature wrap">
+    <h2 class="section-title" data-reveal>We make local businesses look <span class="draw draw--underline">awesome</span></h2>
+
+    <div class="feature__row">
+      <div class="feature__media showcase" data-reveal="left" data-showcase-group>
+        <div class="showcase__desktop">
+          <div class="showcase__bar"><span></span><span></span><span></span></div>
+          <div class="showcase__screens">
+            <img class="showcase__screen is-active" src="assets/desktop-1.png" alt="Example website on desktop" />
+            <img class="showcase__screen" src="assets/desktop-2.png" alt="" />
+            <img class="showcase__screen" src="assets/desktop-3.png" alt="" />
+          </div>
+        </div>
+        <div class="showcase__phone">
+          <div class="showcase__screens">
+            <img class="showcase__screen is-active" src="assets/mobile-1.png" alt="Same site on mobile" />
+            <img class="showcase__screen" src="assets/mobile-2.png" alt="" />
+            <img class="showcase__screen" src="assets/mobile-3.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div data-reveal="right">
+        <h3>Websites</h3>
+        <p>A modern, fast site that works perfectly on a phone and actually brings you customers.</p>
+        <ul class="feature__list"><li>Mobile-first design</li><li>Easy to contact / book</li><li>Live in days</li></ul>
+        <a href="pricing.html" class="btn btn--royal">See Pricing</a>
+      </div>
+    </div>
+
+    <div class="feature__row">
+      <div class="feature__media feature__media--brand" data-reveal="right" aria-label="A logo drawing itself, then assembling into the Web Lift lockup">
+        <svg class="brandanim" viewBox="0 0 400 200" role="img" aria-hidden="true">
+          <!-- mark: rounded square + upward "lift" arrow, draws then fills, then slides left -->
+          <g class="brandanim__mark">
+            <rect class="brandanim__box" x="140" y="40" width="120" height="120" rx="30" pathLength="1" />
+            <path class="brandanim__arrow" d="M200,54 L242,102 L221,102 L221,146 L179,146 L179,102 L158,102 Z" pathLength="1" />
+          </g>
+          <!-- wordmark emerges from the right to complete the lockup -->
+          <text class="brandanim__word" x="178" y="118" font-size="46" font-weight="800" letter-spacing="-2"><tspan fill="#FFFFFF">Web</tspan><tspan fill="#57A6FF"> Lift</tspan></text>
+        </svg>
+      </div>
+      <div data-reveal="left">
+        <h3>Logos &amp; branding</h3>
+        <p>Need a fresh look? We can sort a clean, professional logo and matching colours as part of the build.</p>
+        <ul class="feature__list"><li>Simple, memorable logo</li><li>Colours that match your trade</li><li>Free with a new site</li></ul>
+        <a href="contact.html" class="btn btn--royal">Get a Quote</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Trust band -->
+  <section class="band" data-reveal="scale">
+    <h2>Trusted by <span class="draw draw--underline">local businesses</span> across the UK</h2>
+    <div class="band__logos"><span>TRADES</span><span>CAFES</span><span>GYMS</span><span>CLINICS</span><span>SALONS</span></div>
+  </section>
+
+  <div class="stripe" aria-hidden="true"></div>
+
+  <!-- Packages -->
+  <section class="packages wrap">
+    <h2 class="section-title" data-reveal>Simple, <span class="draw draw--underline">transparent</span> packages</h2>
+    <div class="tier-grid" data-stagger="0.12">
+      <article class="tier" data-reveal>
+        <h3 class="tier__name">Basic</h3>
+        <p class="tier__blurb">Great for getting a smart, simple site live fast.</p>
+        <p class="tier__price">£750</p>
+        <p class="tier__incl">What's included</p>
+        <ul>
+          <li>Up to 5 pages</li>
+          <li>Written &amp; built for you</li>
+          <li>Live in days</li>
+          <li>One round of tweaks</li>
+        </ul>
+        <a href="contact.html" class="btn btn--royal btn--block">Get a Quote</a>
+      </article>
+
+      <article class="tier tier--featured" data-reveal="scale">
+        <span class="tier__badge">Most popular</span>
+        <h3 class="tier__name">Growth</h3>
+        <p class="tier__blurb">The full redesign most local businesses need.</p>
+        <p class="tier__price">£950</p>
+        <p class="tier__incl">Everything in Basic, plus</p>
+        <ul>
+          <li>Up to 8 pages</li>
+          <li>Contact &amp; enquiry form</li>
+          <li>Free logo if you need one</li>
+          <li>Reviews &amp; gallery sections</li>
+        </ul>
+        <a href="contact.html" class="btn btn--sky btn--block">Get a Quote</a>
+      </article>
+
+      <article class="tier" data-reveal>
+        <h3 class="tier__name">Premium</h3>
+        <p class="tier__blurb">For bigger sites, shops or something custom.</p>
+        <p class="tier__price">£1,500<small>+</small></p>
+        <p class="tier__incl">Everything in Growth, plus</p>
+        <ul>
+          <li>Unlimited pages</li>
+          <li>Online shop / e-commerce</li>
+          <li>Custom features &amp; integrations</li>
+          <li>Advanced Google setup</li>
+          <li>30 days priority support</li>
+        </ul>
+        <a href="contact.html" class="btn btn--royal btn--block">Get a Quote</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Case studies -->
+  <section class="cases wrap" id="work">
+    <h2 class="section-title" data-reveal>Recent <span class="draw draw--underline">case studies</span></h2>
+    <p class="cases__sub" data-reveal>Real businesses, real redesigns.</p>
+    <div class="case-grid" data-stagger="0.12">
+      <article class="case-card" data-reveal>
+        <div class="case-card__shot" style="background-image:linear-gradient(rgba(19,48,107,0.45),rgba(14,28,58,0.6)),url('assets/desktop-1.png')">PrimalTraining</div>
+        <div class="case-card__body">
+          <span class="case-card__tag">Fitness · Redesign</span>
+          <h3>Train hard, sign up easy</h3>
+          <p>A bold, high-energy redesign with a clear "reserve your spot" call to action front and centre.</p>
+          <p class="case-card__result">↑ [stat — Doug to confirm]</p>
+        </div>
+      </article>
+      <article class="case-card" data-reveal>
+        <div class="case-card__shot" style="background-image:linear-gradient(rgba(19,48,107,0.45),rgba(14,28,58,0.6)),url('assets/desktop-2.png')">Etran</div>
+        <div class="case-card__body">
+          <span class="case-card__tag">Fintech · New site</span>
+          <h3>Money transfers made simple</h3>
+          <p>A clean, trustworthy site that explains the offering in seconds — no jargon, clear next step.</p>
+          <p class="case-card__result">↑ [stat — Doug to confirm]</p>
+        </div>
+      </article>
+      <article class="case-card" data-reveal>
+        <div class="case-card__shot" style="background-image:linear-gradient(rgba(19,48,107,0.45),rgba(14,28,58,0.6)),url('assets/desktop-3.png')">Area</div>
+        <div class="case-card__body">
+          <span class="case-card__tag">Tech · New site</span>
+          <h3>Browse everything</h3>
+          <p>An elegant product site with a striking hero and clear specs that let the product speak.</p>
+          <p class="case-card__result">↑ [stat — Doug to confirm]</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Auto-scroll examples strip -->
+  <div class="marquee" aria-label="Examples of our work">
+    <div class="marquee__track">
+      <div class="marquee__item" style="background-image:url('https://loremflickr.com/480/300/plumbing,bathroom?lock=71')"><span>Plumbing Co.</span></div>
+      <div class="marquee__item" style="background-image:url('https://loremflickr.com/480/300/cafe,coffee?lock=72')"><span>The Corner Cafe</span></div>
+      <div class="marquee__item" style="background-image:url('https://loremflickr.com/480/300/gym,fitness?lock=73')"><span>FitZone Gym</span></div>
+      <div class="marquee__item" style="background-image:url('https://loremflickr.com/480/300/dentist,dental?lock=74')"><span>Bright Smile Dental</span></div>
+      <div class="marquee__item" style="background-image:url('https://loremflickr.com/480/300/salon,hair?lock=75')"><span>Luxe Hair Studio</span></div>
+      <div class="marquee__item" style="background-image:url('https://loremflickr.com/480/300/electrician,electrical?lock=76')"><span>Spark Electrical</span></div>
+      <!-- duplicate set for seamless loop -->
+      <div class="marquee__item" style="background-image:url('https://loremflickr.com/480/300/plumbing,bathroom?lock=71')"><span>Plumbing Co.</span></div>
+      <div class="marquee__item" style="background-image:url('https://loremflickr.com/480/300/cafe,coffee?lock=72')"><span>The Corner Cafe</span></div>
+      <div class="marquee__item" style="background-image:url('https://loremflickr.com/480/300/gym,fitness?lock=73')"><span>FitZone Gym</span></div>
+      <div class="marquee__item" style="background-image:url('https://loremflickr.com/480/300/dentist,dental?lock=74')"><span>Bright Smile Dental</span></div>
+      <div class="marquee__item" style="background-image:url('https://loremflickr.com/480/300/salon,hair?lock=75')"><span>Luxe Hair Studio</span></div>
+      <div class="marquee__item" style="background-image:url('https://loremflickr.com/480/300/electrician,electrical?lock=76')"><span>Spark Electrical</span></div>
+    </div>
+  </div>
+
+  <!-- Final CTA -->
+  <section class="cta" id="quote">
+    <div class="cta__inner" data-reveal="scale">
+      <h2>Ready to give your website a lift?</h2>
+      <p>Tell us about your business and we'll send a free, no-pressure quote.</p>
+      <!-- Formspree endpoint — quote enquiries go to the inbox verified on form mlgvqpwb -->
+      <form class="cta__form" action="https://formspree.io/f/mlgvqpwb" method="POST">
+        <input type="hidden" name="_subject" value="New quote request — Web Lift (home page)" />
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Email address" required />
+        <input type="text" name="website" placeholder="Your current website (if any)" />
+        <textarea name="message" placeholder="What would you like fixed?" rows="3"></textarea>
+        <button type="submit" class="btn btn--sky btn--lg btn--block">Get my free quote →</button>
+      </form>
+      <p class="cta__small">We reply within one working day. No spam, no pushy sales.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div>
+        <div class="footer__brand"><img src="assets/logo.svg" alt="Web Lift" class="footer__logo-img" /></div>
+        <p class="footer__tag">Done-for-you website redesigns for local businesses. One fixed price, no hassle.</p>
+      </div>
+      <div><h4>Pages</h4><ul><li><a href="about.html">About</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="portfolio.html">Our work</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="contact.html">Website redesign</a></li><li><a href="contact.html">New websites</a></li><li><a href="contact.html">Logos &amp; branding</a></li></ul></div>
+      <div><h4>Get in touch</h4><ul><li><a href="contact.html">Get a quote</a></li><li>web-lift.co.uk</li></ul></div>
+    </div>
+    <div class="wrap footer__bottom">© <span id="year"></span> Web Lift · web-lift.co.uk</div>
+  </footer>
+
+  <script src="js/reveal.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/showcase.js"></script>
+</body>
+</html>

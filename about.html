@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Web Lift</title>
+  <meta name="description" content="Web Lift — the friendly team that gives local businesses websites they're proud of. One small team, one fixed price, no jargon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+  <div class="announce">
+    <span>🚀 Limited spots this month — one fixed price, no surprise bills.</span>
+    <span class="announce__rating"><span class="g">G</span><span class="o">o</span><span class="o2">o</span><span class="g2">g</span><span class="l">l</span><span class="e">e</span> <span class="stars">★★★★★</span> 4.9</span>
+  </div>
+  <header class="nav">
+    <a href="index.html" class="nav__logo" aria-label="Web Lift home"><img src="assets/logo.svg" alt="Web Lift" class="nav__logo-img" /></a>
+    <nav class="nav__links">
+      <a href="about.html">About</a><a href="pricing.html">Pricing</a><a href="portfolio.html">Our work</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="btn btn--royal">Get a Quote</a>
+    <button class="nav__burger" aria-label="Menu">☰</button>
+  </header>
+
+  <section class="phero">
+    <h1 data-reveal>We make local businesses look <span class="draw draw--underline">brilliant</span></h1>
+    <p data-reveal>No agency runaround, no jargon. Just a small, dedicated team that builds you a site you're proud of — for one fixed price.</p>
+  </section>
+
+  <section class="about-cards" data-stagger="0.12">
+    <article class="about-card about-card--royal" data-reveal><h3>A small, hands-on team</h3><p>You deal directly with the people building your site. No account managers, no being passed around.</p></article>
+    <article class="about-card" data-reveal><h3>Built for local businesses</h3><p>Trades, cafes, gyms, salons, clinics — we know what wins local customers and build for exactly that.</p></article>
+    <article class="about-card" data-reveal><h3>One fixed price</h3><p>Quoted upfront, in plain English. No hourly billing, no scope-creep, no nasty surprises.</p></article>
+  </section>
+
+  <p class="mission" data-reveal>Our mission is simple: give every local business a website that actually <span class="draw draw--underline">wins them work</span> — without the cost, jargon or hassle of a traditional agency.</p>
+
+  <section class="wrap" style="padding: var(--space-7) 0">
+    <h2 class="section-title" data-reveal>The people behind <span class="draw draw--underline">Web Lift</span></h2>
+    <div class="team-grid" data-stagger="0.1">
+      <div class="team-card" data-reveal><img src="https://i.pravatar.cc/300?img=12" alt="" /><h4>Doug</h4><p>Founder &amp; Designer</p></div>
+      <div class="team-card" data-reveal><img src="https://i.pravatar.cc/300?img=32" alt="" /><h4>Sophie</h4><p>Copy &amp; Content</p></div>
+      <div class="team-card" data-reveal><img src="https://i.pravatar.cc/300?img=5" alt="" /><h4>Laura</h4><p>Designer</p></div>
+      <div class="team-card" data-reveal><img src="https://i.pravatar.cc/300?img=49" alt="" /><h4>Priya</h4><p>Support</p></div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div data-reveal="left">
+      <h2>Why we started <span class="draw draw--underline">Web Lift</span></h2>
+      <p>We kept meeting brilliant local businesses being let down by their websites — dated, slow, impossible to use on a phone, and quietly costing them customers every day.</p>
+      <p>The fix was always either too expensive (big agencies) or too risky (cheap freelancers who vanish). So we built the middle: proper, done-for-you websites at one honest price.</p>
+      <a href="contact.html" class="btn btn--royal" style="margin-top: var(--space-4)">Work with us</a>
+    </div>
+    <div class="story__art" data-reveal="right">🚀</div>
+  </section>
+
+  <section style="padding: var(--space-7) 0">
+    <h2 class="section-title" data-reveal>What our clients <span class="draw draw--underline">say</span></h2>
+    <div class="testi-grid" data-stagger="0.12">
+      <figure class="testi" data-reveal><span class="stars">★★★★★</span><p>"Friendly, fast and no jargon. Our new site looks brilliant and the phone hasn't stopped."</p><cite>— Dave, Plumber</cite></figure>
+      <figure class="testi" data-reveal><span class="stars">★★★★★</span><p>"One price, sorted in a week. I just sent some photos and they did the rest. Highly recommend."</p><cite>— Sofia, Cafe owner</cite></figure>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta__inner" data-reveal="scale">
+      <h2>Ready to give your website a lift?</h2>
+      <p>Tell us about your business and we'll send a free, no-pressure quote.</p>
+      <a href="contact.html" class="btn btn--sky btn--lg">Get a Quote →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div><div class="footer__brand"><img src="assets/logo.svg" alt="Web Lift" class="footer__logo-img" /></div><p class="footer__tag">Done-for-you website redesigns for local businesses. One fixed price, no hassle.</p></div>
+      <div><h4>Pages</h4><ul><li><a href="about.html">About</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="portfolio.html">Our work</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="contact.html">Website redesign</a></li><li><a href="contact.html">New websites</a></li><li><a href="contact.html">Logos &amp; branding</a></li></ul></div>
+      <div><h4>Get in touch</h4><ul><li><a href="contact.html">Get a quote</a></li><li>web-lift.co.uk</li></ul></div>
+    </div>
+    <div class="wrap footer__bottom">© <span id="year"></span> Web Lift · web-lift.co.uk</div>
+  </footer>
+
+  <script src="js/reveal.js"></script>
+</body>
+</html>

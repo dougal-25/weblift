@@ -1,0 +1,49 @@
+/* Web Lift — scroll animation states. Logic in js/reveal.js. */
+
+/* ---------- Scroll reveal (fade + rise) ---------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+[data-reveal="left"]  { transform: translateX(-32px); }
+[data-reveal="right"] { transform: translateX(32px); }
+[data-reveal="scale"] { transform: scale(0.94); }
+[data-reveal].revealed { opacity: 1; transform: none; }
+
+/* ---------- Draw-on-scroll underline ---------- */
+/* A .draw span gets an SVG injected by reveal.js; the stroke draws itself in.
+   One marker style: underline = one hand-drawn wavy stroke, used everywhere
+   for consistency (circles + scribble were removed — a single stretched shape
+   could not fit every word length cleanly). */
+.draw { position: relative; white-space: nowrap; display: inline-block; }
+.draw__svg {
+  position: absolute;
+  pointer-events: none;
+  overflow: visible;
+  color: var(--color-royal); /* vibrant logo blue */
+  z-index: -1;
+}
+/* On dark sections the royal marker fades into the navy (looks like it stops
+   short). Brighten it so the full stroke reads clearly. */
+.band .draw__svg, .phero--dark .draw__svg { color: var(--color-soft); }
+/* underline hugs the word: small natural overshoot, never extends far past it */
+.draw--underline .draw__svg { left: -2%; width: 104%; bottom: -0.30em; height: 0.38em; }
+.draw__svg path {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke; /* constant px width regardless of stretch — every underline is the same thickness */
+  /* dash set inline by JS to the path length; per-stroke delay set inline too */
+  transition: stroke-dashoffset 0.9s var(--ease) 0.15s;
+}
+.draw--underline .draw__svg path { stroke-width: 5.5; }
+
+/* Respect reduced-motion: show everything, no movement */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1 !important; transform: none !important; transition: none; }
+  .draw__svg path { transition: none; }
+}

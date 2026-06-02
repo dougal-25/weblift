@@ -1,0 +1,83 @@
+/* Web Lift — shared styles for inner pages (about, pricing, portfolio, contact). */
+
+/* ---------- Page hero ---------- */
+.phero { text-align: center; padding: var(--space-9) var(--space-5) var(--space-7); max-width: 880px; margin: 0 auto; }
+.phero h1 { font-size: var(--fs-hero); font-weight: var(--fw-black); line-height: 1.03; letter-spacing: -0.02em; }
+.phero p { font-size: var(--fs-lead); color: var(--color-muted); margin-top: var(--space-4); }
+.phero--dark { background: var(--grad-deep); color: #fff; max-width: none; padding: var(--space-9) var(--space-5); border-radius: 0 0 var(--radius-card) var(--radius-card); }
+.phero--dark p { color: rgba(255,255,255,0.82); }
+
+/* ---------- Pricing tiers ---------- */
+.tier-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--space-5); max-width: 1040px; margin: 0 auto var(--space-7); padding: var(--space-6) var(--space-5) 0; align-items: stretch; }
+.tier { background: var(--color-surface); border-radius: var(--radius-card); padding: var(--space-6); box-shadow: var(--shadow-card); display: flex; flex-direction: column; }
+.tier--featured { background: var(--grad-brand); color: #fff; position: relative; box-shadow: 0 24px 60px rgba(46,139,255,0.35); }
+.tier__badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--color-navy); color: #fff; padding: 5px 16px; border-radius: var(--radius-pill); font-size: var(--fs-small); font-weight: var(--fw-bold); white-space: nowrap; }
+.tier__name { font-size: var(--fs-h3); font-weight: var(--fw-bold); }
+.tier__blurb { font-size: 0.95rem; opacity: 0.75; min-height: 3em; }
+.tier__price { font-size: var(--fs-price); font-weight: var(--fw-black); line-height: 1; margin: var(--space-4) 0; white-space: nowrap; }
+.tier__price small { font-size: 1rem; font-weight: var(--fw-medium); opacity: 0.7; }
+.tier__incl { font-size: var(--fs-small); font-weight: var(--fw-semi); text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; margin-top: var(--space-2); }
+.tier ul { list-style: none; display: flex; flex-direction: column; gap: var(--space-2); margin: var(--space-4) 0 var(--space-6); }
+.tier ul li::before { content: "✓ "; color: var(--color-royal); font-weight: var(--fw-bold); }
+.tier--featured ul li::before { color: #fff; }
+.tier .btn { margin-top: auto; } /* pin CTA to the bottom so all tiers align */
+
+/* ---------- Portfolio grid ---------- */
+.work-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--space-4); max-width: var(--maxw); margin: var(--space-7) auto; padding: 0 var(--space-5); }
+.work-tile { aspect-ratio: 4/3; border-radius: var(--radius-card); overflow: hidden; display: flex; align-items: flex-end; padding: var(--space-5); color: #fff; box-shadow: var(--shadow-card); position: relative; transition: transform var(--dur) var(--ease); background-size: cover; background-position: top center; background-color: var(--color-navy); }
+.work-tile:hover { transform: translateY(-6px); }
+/* default = clean thumbnail of the site's top; on hover the WHOLE design fades
+   in fitted (contain) over navy, and the label + tint step aside. */
+.work-tile__full { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: var(--color-navy); opacity: 0; transition: opacity .45s var(--ease); z-index: 1; }
+.work-tile:hover .work-tile__full { opacity: 1; }
+.work-tile > div { position: relative; z-index: 2; transition: opacity .3s var(--ease); }
+.work-tile:hover > div { opacity: 0; }
+.work-tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 55%, rgba(14,28,58,0.8)); z-index: 1; transition: opacity .3s var(--ease); }
+.work-tile:hover::after { opacity: 0; }
+.work-tile div { position: relative; z-index: 2; }
+.work-tile strong { font-size: 1.15rem; display: block; }
+.work-tile small { opacity: 0.85; }
+
+/* ---------- Contact ---------- */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); max-width: 1040px; margin: var(--space-7) auto; padding: 0 var(--space-5); }
+.contact-call { background: var(--grad-brand); color: #fff; border-radius: var(--radius-card); padding: var(--space-8) var(--space-6); text-align: center; }
+.contact-call h2 { font-size: var(--fs-h2); font-weight: var(--fw-black); }
+.contact-call__num { font-size: clamp(1.3rem,3.2vw,1.9rem); font-weight: var(--fw-black); margin: var(--space-5) 0; word-break: break-word; }
+.contact-call hr { border: none; border-top: 1px solid rgba(255,255,255,0.3); margin: var(--space-5) 0; }
+.contact-form { background: var(--color-surface); border-radius: var(--radius-card); padding: var(--space-7); box-shadow: var(--shadow-card); }
+.contact-form h2 { font-size: var(--fs-h2); font-weight: var(--fw-black); margin-bottom: var(--space-5); }
+.contact-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+.contact-form input, .contact-form textarea { width: 100%; font-family: var(--font-sans); font-size: 1rem; padding: var(--space-4); border: 1px solid var(--color-line); border-radius: var(--radius-sm); margin-bottom: var(--space-3); background: var(--color-bg); }
+.contact-details { text-align: center; padding: var(--space-7) var(--space-5); color: var(--color-muted); }
+.contact-details strong { color: var(--color-text); }
+
+/* ---------- About ---------- */
+.about-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--space-5); max-width: var(--maxw); margin: var(--space-7) auto; padding: 0 var(--space-5); }
+.about-card { border-radius: var(--radius-card); padding: var(--space-6); box-shadow: var(--shadow-card); background: var(--color-surface); }
+.about-card--royal { background: var(--grad-brand); color: #fff; }
+.about-card h3 { font-size: var(--fs-h3); margin-bottom: var(--space-2); }
+.about-card p { color: var(--color-muted); font-size: 0.95rem; }
+.about-card--royal p { color: rgba(255,255,255,0.85); }
+.mission { max-width: 760px; margin: var(--space-8) auto; text-align: center; font-size: var(--fs-h3); font-weight: var(--fw-semi); line-height: 1.4; padding: 0 var(--space-5); }
+.team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: var(--space-5); max-width: var(--maxw); margin: 0 auto; padding: 0 var(--space-5); }
+.team-card { text-align: center; }
+.team-card img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-card); filter: grayscale(1) contrast(1.02); }
+.team-card h4 { margin-top: var(--space-3); }
+.team-card p { color: var(--color-muted); font-size: var(--fs-small); }
+.story { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-7); max-width: 1000px; margin: var(--space-8) auto; padding: 0 var(--space-5); align-items: center; }
+.story h2 { font-size: var(--fs-h2); font-weight: var(--fw-black); }
+.story p { color: var(--color-muted); margin-top: var(--space-4); }
+.story__art { background: var(--grad-deep); border-radius: var(--radius-card); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+
+/* ---------- Shared testimonials ---------- */
+.testi-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: var(--space-5); max-width: 1000px; margin: var(--space-7) auto; padding: 0 var(--space-5); }
+.testi { background: var(--color-surface); border-radius: var(--radius-card); padding: var(--space-6); box-shadow: var(--shadow-soft); }
+.testi .stars { display: block; margin-bottom: var(--space-3); }
+.testi cite { display: block; margin-top: var(--space-4); font-style: normal; font-weight: var(--fw-bold); }
+
+@media (max-width: 820px) {
+  .tier-grid, .work-grid, .contact-grid, .about-cards, .team-grid, .story, .testi-grid { grid-template-columns: 1fr; }
+  .tier--featured { transform: none; }
+  .contact-form .row { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+}

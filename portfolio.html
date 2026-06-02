@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Work | Web Lift</title>
+  <meta name="description" content="Website redesigns and new builds for local businesses — trades, hospitality, gyms, clinics and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+  <div class="announce">
+    <span>🚀 Limited spots this month — one fixed price, no surprise bills.</span>
+    <span class="announce__rating"><span class="g">G</span><span class="o">o</span><span class="o2">o</span><span class="g2">g</span><span class="l">l</span><span class="e">e</span> <span class="stars">★★★★★</span> 4.9</span>
+  </div>
+  <header class="nav">
+    <a href="index.html" class="nav__logo" aria-label="Web Lift home"><img src="assets/logo.svg" alt="Web Lift" class="nav__logo-img" /></a>
+    <nav class="nav__links">
+      <a href="about.html">About</a><a href="pricing.html">Pricing</a><a href="portfolio.html">Our work</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="btn btn--royal">Get a Quote</a>
+    <button class="nav__burger" aria-label="Menu">☰</button>
+  </header>
+
+  <section class="phero phero--dark">
+    <h1 data-reveal>Get inspired by our <span class="draw draw--underline">recent work</span></h1>
+    <p data-reveal>A few of the local businesses we've lifted. (Placeholders — swap for your real projects.)</p>
+  </section>
+
+  <div class="work-grid" data-stagger="0.08">
+    <a class="work-tile" href="contact.html" data-reveal style="background-image:url('assets/work-plumbing.png')"><img class="work-tile__full" src="assets/work-plumbing.png" alt="" loading="lazy" /><div><small>Trades · Redesign</small></div></a>
+    <a class="work-tile" href="contact.html" data-reveal style="background-image:url('assets/work-cafe.jpg')"><img class="work-tile__full" src="assets/work-cafe.jpg" alt="" loading="lazy" /><div><small>Hospitality · New site</small></div></a>
+    <a class="work-tile" href="contact.html" data-reveal style="background-image:url('assets/work-gym.jpg')"><img class="work-tile__full" src="assets/work-gym.jpg" alt="" loading="lazy" /><div><small>Studio · Redesign</small></div></a>
+    <a class="work-tile" href="contact.html" data-reveal style="background-image:url('assets/work-dental.webp')"><img class="work-tile__full" src="assets/work-dental.webp" alt="" loading="lazy" /><div><small>Clinic · New site</small></div></a>
+    <a class="work-tile" href="contact.html" data-reveal style="background-image:url('assets/work-salon.jpeg')"><img class="work-tile__full" src="assets/work-salon.jpeg" alt="" loading="lazy" /><div><small>Salon · Redesign</small></div></a>
+    <a class="work-tile" href="contact.html" data-reveal style="background-image:url('assets/work-electrician.jpg')"><img class="work-tile__full" src="assets/work-electrician.jpg" alt="" loading="lazy" /><div><small>Trades · New site</small></div></a>
+    <a class="work-tile" href="contact.html" data-reveal style="background-image:url('assets/work-garden.webp')"><img class="work-tile__full" src="assets/work-garden.webp" alt="" loading="lazy" /><div><small>Trades · Redesign</small></div></a>
+    <a class="work-tile" href="contact.html" data-reveal style="background-image:url('assets/work-restaurant.jpeg')"><img class="work-tile__full" src="assets/work-restaurant.jpeg" alt="" loading="lazy" /><div><small>Hospitality · New site</small></div></a>
+    <a class="work-tile" href="contact.html" data-reveal style="background-image:url('assets/work-physio.png')"><img class="work-tile__full" src="assets/work-physio.png" alt="" loading="lazy" /><div><small>Clinic · Redesign</small></div></a>
+  </div>
+
+  <section class="cta">
+    <div class="cta__inner" data-reveal="scale">
+      <h2>Want your business in here next?</h2>
+      <p>Let's give your website a lift — one fixed price, no hassle.</p>
+      <a href="contact.html" class="btn btn--sky btn--lg">Get a Quote →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div><div class="footer__brand"><img src="assets/logo.svg" alt="Web Lift" class="footer__logo-img" /></div><p class="footer__tag">Done-for-you website redesigns for local businesses. One fixed price, no hassle.</p></div>
+      <div><h4>Pages</h4><ul><li><a href="about.html">About</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="portfolio.html">Our work</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="contact.html">Website redesign</a></li><li><a href="contact.html">New websites</a></li><li><a href="contact.html">Logos &amp; branding</a></li></ul></div>
+      <div><h4>Get in touch</h4><ul><li><a href="contact.html">Get a quote</a></li><li>web-lift.co.uk</li></ul></div>
+    </div>
+    <div class="wrap footer__bottom">© <span id="year"></span> Web Lift · web-lift.co.uk</div>
+  </footer>
+
+  <script src="js/reveal.js"></script>
+</body>
+</html>

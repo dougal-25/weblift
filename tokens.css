@@ -1,0 +1,67 @@
+/* Web Lift — design tokens. Palette derived from the Web Lift logo (navy + blue),
+   deliberately distinct from the cheapwebdesign.co.uk reference. */
+:root {
+  /* Colour — brand (from logo) */
+  --color-navy:     #13306B;  /* deepest brand navy (logo "Web") */
+  --color-navy-2:   #1B3F87;  /* lighter navy */
+  --color-royal:    #2E8BFF;  /* PRIMARY blue (logo "Lift") — cards, CTA, marker */
+  --color-royal-dk: #1F6FE0;  /* primary hover */
+  --color-sky:      #57A6FF;  /* lighter blue accent, secondary CTA */
+  --color-sky-dk:   #2E8BFF;
+  --color-soft:     #9CC9FF;  /* soft light blue (logo light "Lift") */
+  --color-black:    #0E1C3A;  /* near-navy "black" for nav pill */
+  --color-maroon:   #13306B;  /* announcement bar — now brand navy (was maroon) */
+  --color-bg:       #F1F5FC;  /* page background, subtle blue tint */
+  --color-surface:  #FFFFFF;
+  --color-text:     #16203A;  /* navy-tinted near-black text */
+  --color-muted:    #5C6680;
+  --color-line:     #E1E8F4;
+  --color-gold:     #FBB014;  /* Google stars only */
+  --grad-brand:     linear-gradient(135deg, #2E8BFF 0%, #1B3F87 100%);
+  --grad-deep:      linear-gradient(160deg, #1B3F87 0%, #13306B 100%);
+
+  /* Type */
+  --font-sans: "Outfit", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semi:    600;
+  --fw-bold:    700;
+  --fw-black:   800;
+
+  /* Type scale (mobile-first, clamp scales up on desktop) */
+  --fs-hero:    clamp(2.6rem, 8vw, 5.5rem);
+  --fs-h2:      clamp(2rem, 5vw, 3.25rem);
+  --fs-h3:      clamp(1.3rem, 3vw, 1.75rem);
+  --fs-price:   clamp(3.5rem, 9vw, 6rem);
+  --fs-lead:    clamp(1.05rem, 2.2vw, 1.4rem);
+  --fs-body:    1rem;
+  --fs-small:   0.875rem;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* Radius */
+  --radius-pill: 999px;
+  --radius-card: 22px;
+  --radius-sm:   12px;
+
+  /* Shadow */
+  --shadow-card: 0 18px 50px rgba(20, 25, 60, 0.08);
+  --shadow-soft: 0 8px 24px rgba(20, 25, 60, 0.06);
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 0.15s;
+  --dur:      0.28s;
+
+  /* Layout */
+  --maxw: 1200px;
+}

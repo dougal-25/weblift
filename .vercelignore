@@ -1,0 +1,6 @@
+# Internal — never publish these to the live site
+wiki/
+scratch/
+CLAUDE.md
+README.md
+tokens.css.map

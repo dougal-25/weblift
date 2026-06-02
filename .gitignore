@@ -1,0 +1,21 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Vercel (local deploy link)
+.vercel
+
+# Scratch — disposable UI/design byproducts
+scratch/
+
+# Dependencies / build
+node_modules/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
