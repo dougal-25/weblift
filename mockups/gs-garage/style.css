@@ -1,0 +1,196 @@
+/* ============================================================
+   G.S GARAGE — prospect mockup · component + brand layer
+   Foundation (type, spacing, motion) comes from
+   ../../kit/tokens.css + base.css. We retune the palette to
+   THEIR brand (the blue on their sign) and keep things simple,
+   photo-led and garage-honest. No hardcoded colours in
+   components — everything routes through var() tokens.
+   ============================================================ */
+
+/* --- Brand override: GS Garage blue (from their signage) on white --- */
+:root {
+  --color-royal:    #1F5C97;   /* PRIMARY — their sign blue (CTAs, links) */
+  --color-royal-dk: #164472;   /* hover */
+  --color-navy:     #16293A;   /* dark slate-blue — dark sections / headings */
+  --color-soft:     #8FC0EE;   /* light blue for footer links on dark */
+  --color-bg:       #F4F6F8;   /* clean cool-grey page background */
+  --color-line:     #E2E7EC;   /* hairline */
+  --color-maroon:   #16293A;   /* announcement bar → dark slate-blue */
+  --gs-dark:        #16293A;   /* deepest section colour (hero overlay, footer) */
+  --gs-dark-2:      #1E384D;   /* raised dark surface */
+}
+
+/* light muted text helper for dark backgrounds */
+.muted-light { color: rgba(255,255,255,0.65); }
+
+/* ============================================================
+   HERO — real workshop photo + dark blue overlay
+   ============================================================ */
+.gs-hero {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(22,41,58,0.78) 0%, rgba(22,41,58,0.70) 55%, rgba(22,41,58,0.88) 100%),
+    url("assets/workshop-4.jpg") center 60% / cover no-repeat;
+  color: #fff;
+}
+
+/* Nav (transparent, over the photo) */
+.nav--gs {
+  position: relative; z-index: 5; background: transparent; border-radius: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.14);
+  max-width: var(--maxw); margin: 0 auto;
+}
+.nav--gs .nav__logo { color: #fff; font-weight: var(--fw-black); font-size: 1.45rem; letter-spacing: -0.01em; }
+.nav--gs .nav__logo span { color: var(--color-soft); }
+.nav--gs .nav__links a { color: rgba(255,255,255,0.85); font-weight: var(--fw-medium); }
+.nav--gs .nav__links a:hover { color: #fff; }
+
+.gs-hero__inner {
+  max-width: 760px; margin: 0 auto; text-align: center;
+  padding: clamp(var(--space-8), 11vw, var(--space-9)) var(--space-5);
+  min-height: clamp(460px, 70vh, 640px);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.gs-hero__eyebrow {
+  text-transform: uppercase; letter-spacing: 0.16em; font-size: var(--fs-small);
+  font-weight: var(--fw-semi); color: var(--color-soft); margin: 0 0 var(--space-4);
+}
+.gs-hero__title {
+  font-size: var(--fs-hero); font-weight: var(--fw-black); line-height: 1.04;
+  letter-spacing: -0.02em; margin: 0 0 var(--space-5); color: #fff;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.35);
+}
+.gs-hero__lead {
+  font-size: var(--fs-lead); color: rgba(255,255,255,0.85); max-width: 48ch;
+  margin: 0 auto var(--space-5);
+}
+.gs-hero__rating {
+  display: inline-flex; align-items: center; gap: var(--space-3);
+  margin: 0 0 var(--space-6); font-size: 1.05rem;
+}
+.gs-hero__rating strong { font-size: 1.25rem; }
+.gs-hero__cta { display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap; }
+
+/* ============================================================
+   SHARED RHYTHM
+   ============================================================ */
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: var(--space-9) var(--space-5); }
+.section-title { font-size: var(--fs-h2); font-weight: var(--fw-black); color: var(--color-navy); text-align: center; margin: 0 0 var(--space-4); letter-spacing: -0.02em; }
+.gs-section-lead { text-align: center; color: var(--color-muted); font-size: var(--fs-lead); max-width: 56ch; margin: 0 auto var(--space-7); }
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ============================================================
+   REVIEWS
+   ============================================================ */
+.gs-reviews { padding-top: var(--space-8); }
+.gs-reviews__head { text-align: center; margin-bottom: var(--space-7); }
+.gs-reviews__score {
+  display: inline-flex; align-items: baseline; gap: var(--space-3);
+  margin-bottom: var(--space-3); flex-wrap: wrap; justify-content: center;
+}
+.gs-reviews__num { font-size: var(--fs-price); font-weight: var(--fw-black); color: var(--color-royal); line-height: 1; }
+.gs-reviews__score .stars { font-size: 1.5rem; }
+.gs-reviews__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
+.review { display: flex; flex-direction: column; gap: var(--space-3); }
+.review .stars { font-size: 1.1rem; }
+.review p { color: var(--color-text); font-size: 1.05rem; margin: 0; }
+.review cite { color: var(--color-muted); font-style: normal; font-weight: var(--fw-semi); font-size: var(--fs-small); }
+
+/* ============================================================
+   SERVICES
+   ============================================================ */
+.services__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-5); }
+.svc { transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease); }
+.svc:hover { transform: translateY(-3px); box-shadow: var(--shadow-card); border-color: var(--color-royal); }
+.svc h3 { font-size: var(--fs-h3); color: var(--color-navy); margin: 0 0 var(--space-3); }
+.svc p { color: var(--color-muted); margin: 0; }
+
+/* ============================================================
+   GALLERY — real workshop photos
+   ============================================================ */
+.gs-gallery__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+.gs-shot { margin: 0; border-radius: var(--radius-card); overflow: hidden; border: 1px solid var(--color-line); box-shadow: var(--shadow-soft); background: var(--color-navy); }
+.gs-shot img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; transition: transform var(--dur) var(--ease); }
+.gs-shot:hover img { transform: scale(1.04); }
+
+/* ============================================================
+   LOCATION & HOURS
+   ============================================================ */
+.gs-location__grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: var(--space-6); align-items: stretch; }
+.gs-location__info {
+  background: var(--color-surface); border: 1px solid var(--color-line);
+  border-radius: var(--radius-card); padding: var(--space-7); box-shadow: var(--shadow-soft);
+}
+.gs-location__info h3 { font-size: var(--fs-h3); color: var(--color-navy); margin: 0 0 var(--space-4); }
+.gs-address { font-style: normal; color: var(--color-text); font-size: 1.05rem; line-height: 1.7; margin-bottom: var(--space-5); }
+.gs-hours { list-style: none; margin: 0 0 var(--space-6); padding: 0; }
+.gs-hours li { display: flex; justify-content: space-between; gap: var(--space-4); padding: var(--space-3) 0; border-bottom: 1px solid var(--color-line); font-weight: var(--fw-medium); }
+.gs-hours li:last-child { border-bottom: 0; }
+.gs-location__cta { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+.gs-location__map {
+  border-radius: var(--radius-card); overflow: hidden; min-height: 340px;
+  border: 1px solid var(--color-line); box-shadow: var(--shadow-soft);
+}
+.gs-location__map iframe { width: 100%; height: 100%; min-height: 340px; border: 0; display: block; }
+
+/* ============================================================
+   BOOKING
+   ============================================================ */
+.gs-booking { background: var(--gs-dark); color: #fff; }
+.gs-booking__inner { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-7); align-items: center; }
+.gs-booking__copy h2 { font-size: var(--fs-h2); font-weight: var(--fw-black); margin: 0 0 var(--space-4); letter-spacing: -0.02em; }
+.gs-booking__copy p { color: rgba(255,255,255,0.8); font-size: var(--fs-lead); margin: 0 0 var(--space-5); max-width: 42ch; }
+.gs-booking__alt { font-size: 1.05rem; }
+.gs-booking__alt a { color: var(--color-soft); font-weight: var(--fw-bold); }
+
+.gs-booking__form { display: flex; flex-direction: column; gap: var(--space-4); color: var(--color-text); }
+.gs-booking__form label { display: flex; flex-direction: column; gap: var(--space-2); font-weight: var(--fw-semi); font-size: var(--fs-small); color: var(--color-navy); }
+.gs-booking__form input,
+.gs-booking__form select {
+  font-family: var(--font-sans); font-size: var(--fs-body); font-weight: var(--fw-regular);
+  padding: var(--space-3) var(--space-4); border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm); background: #fff; color: var(--color-text);
+}
+.gs-booking__form input:focus,
+.gs-booking__form select:focus { outline: 2px solid var(--color-royal); outline-offset: 1px; border-color: var(--color-royal); }
+.gs-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.gs-field-row label { margin: 0; }
+.gs-booking__note { text-align: center; color: var(--color-muted); font-size: var(--fs-small); margin: 0; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.gs-footer { background: var(--gs-dark); color: rgba(255,255,255,0.75); padding: var(--space-8) 0 var(--space-5); }
+.gs-footer__grid { display: grid; grid-template-columns: 1.6fr 1fr 1.4fr 1fr; gap: var(--space-6); }
+.gs-footer__logo { font-size: 1.5rem; font-weight: var(--fw-black); color: #fff; }
+.gs-footer__tag { margin-top: var(--space-3); font-size: var(--fs-small); max-width: 260px; color: rgba(255,255,255,0.55); }
+.gs-footer h4 { font-size: var(--fs-small); text-transform: uppercase; letter-spacing: 1px; color: var(--color-soft); margin-bottom: var(--space-4); }
+.gs-footer ul { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); font-size: 0.95rem; padding: 0; }
+.gs-footer a:hover { color: #fff; }
+.gs-footer__bottom { max-width: var(--maxw); margin: var(--space-7) auto 0; padding: var(--space-5) var(--space-5) 0; border-top: 1px solid rgba(255,255,255,0.12); text-align: center; font-size: var(--fs-small); color: rgba(255,255,255,0.5); }
+.gs-footer__bottom a { color: var(--color-soft); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .gs-reviews__grid { grid-template-columns: 1fr; }
+  .gs-gallery__grid { grid-template-columns: repeat(2, 1fr); }
+  .gs-location__grid { grid-template-columns: 1fr; }
+  .gs-booking__inner { grid-template-columns: 1fr; gap: var(--space-6); }
+  .gs-footer__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .nav--gs .nav__links { display: none; }
+  .gs-gallery__grid { grid-template-columns: 1fr 1fr; }
+  .gs-field-row { grid-template-columns: 1fr; }
+  .announce { gap: var(--space-3); }
+  .gs-footer__grid { grid-template-columns: 1fr; }
+}

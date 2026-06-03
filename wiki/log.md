@@ -177,3 +177,26 @@ Append-only. Most recent at bottom.
 - **Mockup workflow established:** prospects now built from `mockups/_starter/` (`cp -r`) — a working blank template (nav/hero/services/about/contact/footer) that *links* the kit via `../../kit/…` and carries only a small `style.css` + a `prospect.md` status tracker. Starter screenshot-confirmed: kit loads from a mockup folder (Outfit font, palette, pill buttons, hand-drawn underline all render).
 - **Why captured** in `wiki/decisions/0001_shared_kit_per_prospect_mockups.md`: storage isn't the constraint (git is the archive; `git rm` dead prospects), forked CSS is — so one linked kit, many thin mockups. CLAUDE.md got the imperative convention block.
 - **Predates the kit, migrate later (not now):** the Homerton mockup + business-site `css/home.css`/`css/pages.css` still hold their own component CSS. Component layer (`kit/components.css`) to be promoted only when a 2nd mockup reuses a pattern.
+
+## [2026-06-03] build | first prospect mockup — G.S Garage (gs-garage)
+- New cold prospect: G.S Garage Services & MOT Ltd (Stratford, E15) — strong reputation, no real website (bare Google Site). ~20% close estimate.
+- Scaffolded `mockups/gs-garage/` from `_starter` (kit linked via `../../kit/`, never forked). First real mockup on the shared-kit workflow.
+- Single long page: animated hero → reviews (4.9★/800+) → 8 services → gallery (placeholder tiles) → location+hours+live Google Map → booking-form stub → footer. Built only `index.html` + `style.css` + `prospect.md`.
+- Brand: rugged charcoal `#1A1C1F` + amber `#F5A623`, set via `:root` overrides in the mockup's `style.css` only (`--color-royal`/`--color-navy`/`--color-bg`/etc.). Old-school workshop feel per Doug.
+- Hero moment: self-drawing line-art **car on a 2-post lift** — inline SVG, `pathLength="1"` + `stroke-dashoffset` 1→0 via a pure-CSS `gs-draw` keyframe with staggered `animation-delay`s. No external API (Higgs Field declined — kept it free/quick). Reduced-motion pins to the finished drawing. Reuses the kit's draw-on language but is self-contained (kit `reveal.js` only handles the `.draw` underlines + `data-reveal`).
+- Desktop + mobile (390px) screenshot-confirmed: hero, all sections, live map pin on 26 Maryland Road, mobile stack all good.
+- ⚠️ Before sending (also in prospect.md): VERIFY 4.9★/800+ figure with owner (marked `<!-- VERIFY -->`; we removed an unverified rating from our own site before — commit 808ef1e); swap placeholder testimonials + gallery photos for real ones; booking form is a non-functional stub.
+
+## [2026-06-03] revise | GS Garage v2 — their blue, real photos, simpler
+- Doug feedback after v1: remove all decorative draw-underlines; match THEIR colour tone; use real images from their Google Site; "more basic, more garage, simple".
+- Pulled their brand + photos via Playwright: their Google Site header is steel-blue (#226E93) and their real signage is a blue board — so switched palette from amber/charcoal to **GS Garage blue #1F5C97 on white** (dark slate #16293A for hero overlay/footer). Removed every `.draw--underline` span.
+- Image grab was fiddly: googleusercontent `sitesv` URLs 403 on curl and block crossOrigin canvas, but render fine as plain <img>. Worked around it — injected all 32 site images into the page, screenshotted a contact sheet to choose, then element-screenshotted the chosen 8 at w1100 into `mockups/gs-garage/assets/` (sips-compressed to ~1.3MB total).
+- Replaced the line-art car hero with a **real workshop photo hero** (workshop-4 + dark-blue overlay) and the placeholder gallery tiles with **6 real photos** (incl. their actual blue signage). Flattened gradients/removed amber glow for a more basic, garage-honest feel.
+- Desktop + mobile screenshot-confirmed (hero, reviews, services, gallery, mobile stack). Testimonials still placeholder; rating still needs owner verification.
+
+## [2026-06-03] ship + park | GS Garage preview deployed + design sent
+- Deployed a self-contained bundle (kit + real photos inlined, `../../kit/` paths rewritten to `kit/`) to Vercel prod under `douglaswoolfenden-byte`: **https://gs-garage-preview.vercel.app** (clean alias, public, no auth wall — verified live end-to-end). Bundle lives in gitignored `scratch/gs-garage-preview/`; rebuild from `mockups/gs-garage/`.
+- Deploy method note (reusable): only the bundle dir is deployed via `npx vercel deploy --prod --yes` from inside it — NOT the repo root — so the wiki/scratch/other prospects stay private. CLI was already authed.
+- Sharing strategy agreed: live link + Doug records a Loom (control narrative, see watch analytics, theft-proof pitch); expiring link = urgency.
+- Week-max guardrail: Google Calendar reminder set for 2026-06-10 09:00 to take the preview down (or `npx vercel remove gs-garage-preview --yes`).
+- **Design sent to owner; prospect parked** (busy, likely no). Outstanding if revived: verify 4.9★/800+, swap placeholder review quotes for real ones, wire booking form. First end-to-end run of the shared-kit → per-prospect-mockup → deploy workflow.
