@@ -170,3 +170,10 @@ Append-only. Most recent at bottom.
 - dwcw no longer tracks this project (added to dwcw root `.gitignore` under the "per-project repos" block, same pattern as thesoundcave). Wiki travels with the repo, still inside the Obsidian vault on disk.
 - Fresh git history (initial commit; old monorepo commits not carried over). gitleaks scan clean before first push. `.vercel` link untouched — CLI deploys still work.
 - Follow-up (not done): connect this GitHub repo to Vercel for git-based deploys if desired; currently deploys via `vercel deploy --prod` CLI.
+
+## [2026-06-03] site + architecture | removed false rating; extracted shared kit + mockup workflow
+- **Removed the unverified "4.9 ★ Google rating"** from the business site (Doug: it's not true). Stripped the announce-bar rating on all 6 pages + the hero "Rated 4.9/5" trust line. Header screenshot-confirmed clean. (Left the About-page testimonial quotes — separate placeholder content.)
+- **Extracted a shared `kit/`** as the single source of truth for the foundation: `git mv` of `tokens.css`, `css/base.css`, `css/animations.css`, `js/reveal.js` → `kit/`. Re-pointed all 6 business-site pages' `<link>`/`<script>` hrefs. Verified live site renders + **0 new 404s** (only pre-existing loremflickr 500s).
+- **Mockup workflow established:** prospects now built from `mockups/_starter/` (`cp -r`) — a working blank template (nav/hero/services/about/contact/footer) that *links* the kit via `../../kit/…` and carries only a small `style.css` + a `prospect.md` status tracker. Starter screenshot-confirmed: kit loads from a mockup folder (Outfit font, palette, pill buttons, hand-drawn underline all render).
+- **Why captured** in `wiki/decisions/0001_shared_kit_per_prospect_mockups.md`: storage isn't the constraint (git is the archive; `git rm` dead prospects), forked CSS is — so one linked kit, many thin mockups. CLAUDE.md got the imperative convention block.
+- **Predates the kit, migrate later (not now):** the Homerton mockup + business-site `css/home.css`/`css/pages.css` still hold their own component CSS. Component layer (`kit/components.css`) to be promoted only when a 2nd mockup reuses a pattern.

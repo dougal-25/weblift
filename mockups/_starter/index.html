@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- PROSPECT: replace [Business] everywhere, swap colours in style.css :root overrides -->
+  <title>[Business Name] — [What they do]</title>
+  <meta name="description" content="[One-line description of the business for search results.]" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Web Lift shared kit — DO NOT copy these files into the mockup, link them -->
+  <link rel="stylesheet" href="../../kit/tokens.css" />
+  <link rel="stylesheet" href="../../kit/base.css" />
+  <link rel="stylesheet" href="../../kit/animations.css" />
+  <!-- Prospect-specific styling + brand overrides live here -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <a href="index.html" class="nav__logo" aria-label="[Business] home">[Business]</a>
+    <nav class="nav__links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn--royal">Get in touch</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1 class="hero__title" data-reveal>[Headline — the promise to their customer]</h1>
+    <p class="hero__lead" data-reveal>[Sub-line — who they help and how.]</p>
+    <div class="hero__cta" data-reveal>
+      <a href="#contact" class="btn btn--royal btn--lg">Get in touch <span aria-hidden="true">→</span></a>
+      <a href="#services" class="btn btn--ghost btn--lg">What we do</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services wrap" id="services">
+    <h2 class="section-title" data-reveal>What we <span class="draw draw--underline">do</span></h2>
+    <div class="services__grid" data-stagger="0.12">
+      <article class="card" data-reveal><h3>[Service one]</h3><p>[Plain-English benefit.]</p></article>
+      <article class="card" data-reveal><h3>[Service two]</h3><p>[Plain-English benefit.]</p></article>
+      <article class="card" data-reveal><h3>[Service three]</h3><p>[Plain-English benefit.]</p></article>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about wrap" id="about">
+    <h2 class="section-title" data-reveal>About <span class="draw draw--underline">us</span></h2>
+    <p class="about__lead" data-reveal>[Short story — how long, what area, why customers trust them.]</p>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact wrap" id="contact">
+    <h2 class="section-title" data-reveal>Get in <span class="draw draw--underline">touch</span></h2>
+    <p data-reveal>[Phone] · [Email] · [Area covered]</p>
+    <a href="tel:[phone]" class="btn btn--royal btn--lg" data-reveal>Call now</a>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> [Business Name]. Site by <a href="https://web-lift.co.uk">Web Lift</a>.</p>
+  </footer>
+
+  <!-- Web Lift shared kit — scroll reveal engine -->
+  <script src="../../kit/reveal.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

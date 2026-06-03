@@ -12,7 +12,7 @@ Catalogue of every wiki page. Updated whenever a page is added/renamed/removed.
 - [Dynamic Animation System](animation_system.md) — draw-on-scroll underlines/circles + scroll reveals
 
 ## Decisions
-- _none yet (key decisions recorded inline in spec for now)_
+- [0001 — Shared kit + per-prospect mockups](decisions/0001_shared_kit_per_prospect_mockups.md) — one linked `kit/` foundation, thin `mockups/<slug>/` folders, git-as-archive (no deletion)
 
 ## Personas
 - [Local SMB Owner](local_smb.md) — the plumber/cafe/gym owner

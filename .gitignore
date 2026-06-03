@@ -10,6 +10,7 @@
 
 # Scratch — disposable UI/design byproducts
 scratch/
+.playwright-mcp/
 
 # Dependencies / build
 node_modules/
