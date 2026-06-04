@@ -28,8 +28,9 @@ The **Logos & branding** feature row on the home page (was a `loremflickr` place
 - Motion: pure CSS, one shared **6.5s loop** (`css/home.css`). Timeline — box draws (0–16%), arrow draws (13–32%), brand colour fills (`ba-fill`, 32–44%), then the **mark slides left** (`ba-shift`, translateX 0→−100px, 46–62%) while the **wordmark emerges from the right** (`ba-word-in`, opacity + translateX 34px→0, 46–62%) to complete the lockup; holds, then `ba-fade` fades the group (88–97%) and it restarts undrawn/centred. Earlier version had a wavy underline instead of the wordmark assembly — Doug swapped it 2026-06-02 for the slide-left + wordmark-in. Navy panel (`--grad-deep`) so the light mark + wordmark pop.
 - Accessibility: `prefers-reduced-motion` pins it to the final drawn+filled state, no looping.
 - **Favicon** (added same day): `assets/favicon.svg` = the logo's arrow-mark only (navy square + white arrow, no wordmark), linked from all 6 pages' `<head>`.
+- **Raster fallbacks** (added 2026-06-04): old browsers ignore SVG favicons and iOS ignores SVG `apple-touch-icon`, so all 6 heads now also link `favicon-32.png`, `favicon.ico` (16/32/48), and `favicon-180.png` (apple-touch). The rasters are generated from the *same* geometry by `assets/favicon-gen.py` (pure stdlib — hand-drawn pixels + `zlib` PNG, no deps/build step) so they stay in sync if the brand colours change; re-run `python3 assets/favicon-gen.py`.
 
 ## Open / todo
 - Tune draw speed/easing once Doug sees it live.
 - Consider drawing the circle slightly *over* the text baseline vs centred per word.
-- `.ico`/`.png` favicon fallbacks for old browsers — currently SVG-only (fine for all modern browsers).
+- ~~`.ico`/`.png` favicon fallbacks for old browsers — currently SVG-only~~ — done 2026-06-04 (see "Raster fallbacks" above).

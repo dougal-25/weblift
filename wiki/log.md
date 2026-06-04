@@ -177,3 +177,8 @@ Append-only. Most recent at bottom.
 - **Mockup workflow established:** prospects now built from `mockups/_starter/` (`cp -r`) — a working blank template (nav/hero/services/about/contact/footer) that *links* the kit via `../../kit/…` and carries only a small `style.css` + a `prospect.md` status tracker. Starter screenshot-confirmed: kit loads from a mockup folder (Outfit font, palette, pill buttons, hand-drawn underline all render).
 - **Why captured** in `wiki/decisions/0001_shared_kit_per_prospect_mockups.md`: storage isn't the constraint (git is the archive; `git rm` dead prospects), forked CSS is — so one linked kit, many thin mockups. CLAUDE.md got the imperative convention block.
 - **Predates the kit, migrate later (not now):** the Homerton mockup + business-site `css/home.css`/`css/pages.css` still hold their own component CSS. Component layer (`kit/components.css`) to be promoted only when a 2nd mockup reuses a pattern.
+
+## [2026-06-04] site | favicon raster fallbacks (closes animation_system open todo)
+- **Added `.png`/`.ico` favicon fallbacks** for old browsers (which ignore SVG favicons) and iOS (which ignores SVG `apple-touch-icon`). All 6 heads now link `favicon-32.png`, `favicon.ico` (16/32/48), and `favicon-180.png` alongside the existing SVG; apple-touch-icon repointed SVG→PNG.
+- **Reproducible, no build step:** `assets/favicon-gen.py` rasterises the *same* logo geometry (navy gradient rounded square + white lift arrow) using only stdlib — hand-drawn supersampled pixels + `zlib`-written PNG, ICO embeds PNG entries. Re-run `python3 assets/favicon-gen.py` if brand colours change. Output validated (`file`) + visually confirmed against `favicon.svg`.
+- Closes the favicon line under `wiki/features/animation_system.md` "Open / todo".
