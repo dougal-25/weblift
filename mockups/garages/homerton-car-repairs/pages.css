@@ -1,0 +1,495 @@
+/* ==========================================================================
+   HOMERTON CAR REPAIRS — INNER-PAGE STYLES
+   Page headers, services detail, pricing, why-us strip, CTA band.
+   Reuses the tokens defined in style.css :root (amber/orange dark garage).
+   ========================================================================== */
+
+/* Active nav state (current page) */
+.nav-link--active {
+    color: #ffffff;
+}
+.nav-link--active::after {
+    width: 100%;
+}
+.mobile-menu__link--active {
+    color: var(--color-accent-amber);
+}
+
+/* --------------------------------------------------------------------------
+   PAGE HEADER (sub-hero banner on inner pages)
+   -------------------------------------------------------------------------- */
+.page-header {
+    position: relative;
+    padding: 160px 0 70px;
+    background:
+        radial-gradient(circle at 70% 30%, rgba(255, 115, 0, 0.12) 0%, transparent 55%),
+        var(--color-dark-bg);
+    border-bottom: 1px solid var(--color-glass-border);
+    text-align: center;
+    overflow: hidden;
+}
+
+.page-header__inner {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.page-header .section-subtitle {
+    margin-bottom: 14px;
+}
+
+.page-header h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.page-header p {
+    font-size: 17px;
+    color: var(--color-text-secondary);
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.breadcrumb {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+    letter-spacing: 0.03em;
+}
+.breadcrumb a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+.breadcrumb a:hover { color: var(--color-accent-amber); }
+.breadcrumb span { color: var(--color-accent-amber); }
+
+/* --------------------------------------------------------------------------
+   WHY-US STRIP (home, condensed about)
+   -------------------------------------------------------------------------- */
+.why-us {
+    padding: 90px 0;
+    background-color: #0a0d17;
+    border-top: 1px solid var(--color-glass-border);
+}
+
+.why-us__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.why-card {
+    background-color: var(--color-panel-bg);
+    border: 1px solid var(--color-glass-border);
+    border-radius: 12px;
+    padding: 30px 26px;
+    transition: var(--transition-smooth);
+}
+.why-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 115, 0, 0.3);
+}
+.why-card__icon {
+    font-size: 26px;
+    margin-bottom: 16px;
+}
+.why-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.why-card p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   CTA BAND (bottom of most pages)
+   -------------------------------------------------------------------------- */
+.cta-band {
+    padding: 80px 0;
+    background:
+        linear-gradient(135deg, rgba(255, 115, 0, 0.08), rgba(245, 158, 11, 0.04)),
+        var(--color-dark-bg);
+    border-top: 1px solid var(--color-glass-border);
+}
+.cta-band__inner {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+}
+.cta-band h2 {
+    font-size: 34px;
+    margin-bottom: 14px;
+}
+.cta-band p {
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    margin-bottom: 32px;
+}
+.cta-band__actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.btn--lg {
+    padding: 14px 32px;
+    font-size: 16px;
+}
+.btn--outline {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid var(--color-glass-border);
+}
+.btn--outline:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--color-accent-orange);
+    transform: translateY(-2px);
+}
+
+/* Section subtitle / title that center under the home services link */
+.section-footer-link {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* --------------------------------------------------------------------------
+   SERVICES — DETAILED PAGE
+   -------------------------------------------------------------------------- */
+.services-detail {
+    padding: 90px 0;
+}
+
+.service-detail-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 32px;
+    align-items: start;
+    background-color: var(--color-panel-bg);
+    border: 1px solid var(--color-glass-border);
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 28px;
+    transition: var(--transition-smooth);
+}
+.service-detail-row:hover {
+    border-color: rgba(255, 115, 0, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.service-detail-row__icon {
+    color: var(--color-accent-orange);
+    background-color: rgba(255, 115, 0, 0.06);
+    border: 1px solid rgba(255, 115, 0, 0.18);
+    width: 72px;
+    height: 72px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-detail-row__body h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+.service-detail-row__body > p {
+    font-size: 15px;
+    color: var(--color-text-secondary);
+    margin-bottom: 24px;
+    max-width: 720px;
+    line-height: 1.7;
+}
+
+.service-includes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 28px;
+    margin-bottom: 26px;
+}
+.service-includes li {
+    list-style: none;
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    position: relative;
+    padding-left: 26px;
+}
+.service-includes li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-accent-amber);
+    font-weight: bold;
+}
+
+.service-detail-row__footer {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--color-glass-border);
+    padding-top: 22px;
+}
+.service-price-tag {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    color: var(--color-text-secondary);
+}
+.service-price-tag strong {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 800;
+    margin-left: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   PRICING PAGE
+   -------------------------------------------------------------------------- */
+.pricing-tiers {
+    padding: 90px 0 60px;
+}
+
+.tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+
+.tier-card {
+    background-color: var(--color-panel-bg);
+    border: 1px solid var(--color-glass-border);
+    border-radius: 16px;
+    padding: 40px 34px;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-smooth);
+    position: relative;
+}
+.tier-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.tier-card--featured {
+    border-color: var(--color-accent-orange);
+    box-shadow: 0 0 0 1px var(--color-accent-orange), 0 20px 50px rgba(255, 115, 0, 0.12);
+}
+
+.tier-badge {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--color-accent-orange), var(--color-accent-amber));
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 6px 16px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.tier-card__name {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+.tier-card__interval {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 24px;
+}
+
+.tier-card__price {
+    font-family: var(--font-heading);
+    margin-bottom: 24px;
+}
+.tier-card__price .from {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 4px;
+}
+.tier-card__price .amount {
+    font-size: 48px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.tier-card__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex-grow: 1;
+    border-top: 1px solid var(--color-glass-border);
+    padding-top: 26px;
+}
+.tier-card__features li {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    position: relative;
+    padding-left: 26px;
+    line-height: 1.5;
+}
+.tier-card__features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-accent-amber);
+    font-weight: bold;
+}
+
+/* À-la-carte price table */
+.price-table-section {
+    padding: 60px 0 90px;
+}
+
+.price-table {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: var(--color-panel-bg);
+    border: 1px solid var(--color-glass-border);
+    border-radius: 14px;
+    overflow: hidden;
+}
+.price-table thead th {
+    background-color: rgba(255, 255, 255, 0.03);
+    font-family: var(--font-heading);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-secondary);
+    text-align: left;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--color-glass-border);
+}
+.price-table thead th:last-child { text-align: right; }
+.price-table tbody td {
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--color-glass-border);
+    font-size: 15px;
+}
+.price-table tbody tr:last-child td { border-bottom: none; }
+.price-table tbody tr:hover { background-color: rgba(255, 255, 255, 0.02); }
+.price-table .item-name {
+    font-weight: 600;
+    color: #ffffff;
+}
+.price-table .item-desc {
+    display: block;
+    font-size: 13px;
+    color: var(--color-text-muted);
+    margin-top: 3px;
+    font-weight: 400;
+}
+.price-table .item-price {
+    text-align: right;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-accent-amber);
+    white-space: nowrap;
+}
+.price-table .item-price .from-label {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-right: 6px;
+    font-weight: 500;
+}
+
+.pricing-note {
+    max-width: 860px;
+    margin: 28px auto 0;
+    text-align: center;
+    font-size: 13px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+.pricing-note strong { color: var(--color-text-secondary); }
+
+/* --------------------------------------------------------------------------
+   ABOUT PAGE additions
+   -------------------------------------------------------------------------- */
+.about-stats {
+    padding: 0 0 90px;
+}
+.about-stats__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+.about-stat {
+    background-color: var(--color-panel-bg);
+    border: 1px solid var(--color-glass-border);
+    border-radius: 12px;
+    padding: 32px 24px;
+    text-align: center;
+}
+.about-stat__num {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff 30%, var(--color-accent-amber) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+.about-stat__label {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+    .why-us__grid { grid-template-columns: repeat(2, 1fr); }
+    .tiers-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+    .tier-card--featured { order: -1; }
+    .about-stats__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .page-header { padding: 130px 0 50px; }
+    .page-header h1 { font-size: 34px; }
+    .why-us__grid { grid-template-columns: 1fr; }
+    .service-detail-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 28px 22px;
+    }
+    .service-includes { grid-template-columns: 1fr; }
+    .price-table thead { display: none; }
+    .price-table tbody td { display: block; padding: 14px 20px; }
+    .price-table tbody td.item-price { text-align: left; padding-top: 0; padding-bottom: 18px; }
+    .price-table tbody tr { display: block; border-bottom: 1px solid var(--color-glass-border); }
+    .price-table tbody tr td { border-bottom: none; }
+}
+
+@media (max-width: 480px) {
+    .about-stats__grid { grid-template-columns: 1fr; }
+}

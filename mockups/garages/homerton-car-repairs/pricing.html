@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Homerton Car Repairs — Clear, Upfront Garage Prices Hackney</title>
+    <meta name="description" content="Transparent pricing for car servicing, MOT checks, repairs and bodywork in Homerton, Hackney. Clear service tiers and a no-surprises quote before any work begins.">
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../tokens.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo__icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
+                        <circle cx="7" cy="17" r="2" />
+                        <path d="M9 17h6" />
+                        <circle cx="17" cy="17" r="2" />
+                    </svg>
+                </span>
+                <div class="logo__text">
+                    <span class="logo__brand">Homerton</span>
+                    <span class="logo__sub">Car Repairs</span>
+                </div>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="pricing.html" class="nav-link nav-link--active">Pricing</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-contact">
+                <a href="tel:02089869160" class="phone-link">
+                    <span class="phone-link__icon">📞</span>
+                    <div class="phone-link__details">
+                        <span class="phone-label">Call Shop</span>
+                        <span class="phone-num">020 8986 9160</span>
+                    </div>
+                </a>
+                <a href="contact.html#booking" class="btn btn--primary">Book Now</a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__links">
+            <a href="index.html" class="mobile-menu__link">Home</a>
+            <a href="services.html" class="mobile-menu__link">Services</a>
+            <a href="pricing.html" class="mobile-menu__link mobile-menu__link--active">Pricing</a>
+            <a href="about.html" class="mobile-menu__link">About</a>
+            <a href="contact.html" class="mobile-menu__link">Contact</a>
+            <div class="mobile-menu__phones">
+                <a href="tel:02089869160" class="mobile-phone">📞 Shop: 020 8986 9160</a>
+                <a href="tel:07930157822" class="mobile-phone">📱 Mobile: 07930 157 822</a>
+            </div>
+            <a href="contact.html#booking" class="btn btn--primary btn--full">Book Appointment</a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container page-header__inner">
+            <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <span>Pricing</span></div>
+            <span class="section-subtitle">Clear & Upfront</span>
+            <h1>Honest Pricing, No Surprises</h1>
+            <p>We believe you should know roughly what you're paying before you drop your car off. Below are our service tiers and typical prices — you'll always get a firm quote confirmed before any work starts.</p>
+        </div>
+    </section>
+
+    <!-- Servicing Tiers -->
+    <section class="pricing-tiers">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Service Plans</span>
+                <h2 class="section-title">Choose Your Service Level</h2>
+                <div class="title-bar"></div>
+                <p class="section-lead">Pick the service that matches your mileage. Every service is logged in your vehicle's history and carried out by a qualified mechanic.</p>
+            </div>
+
+            <div class="tiers-grid">
+                <!-- Interim -->
+                <div class="tier-card">
+                    <h3 class="tier-card__name">Interim Service</h3>
+                    <p class="tier-card__interval">Every 6 months / 6,000 miles</p>
+                    <div class="tier-card__price">
+                        <span class="from">From</span>
+                        <span class="amount">£89</span>
+                    </div>
+                    <ul class="tier-card__features">
+                        <li>Engine oil & oil filter change</li>
+                        <li>All fluid levels topped up</li>
+                        <li>Tyre, brake & light check</li>
+                        <li>30-point safety inspection</li>
+                        <li>Service history stamped</li>
+                    </ul>
+                    <a href="contact.html#booking" class="btn btn--outline btn--full">Book Interim</a>
+                </div>
+
+                <!-- Full (featured) -->
+                <div class="tier-card tier-card--featured">
+                    <span class="tier-badge">Most Popular</span>
+                    <h3 class="tier-card__name">Full Service</h3>
+                    <p class="tier-card__interval">Every 12 months / 12,000 miles</p>
+                    <div class="tier-card__price">
+                        <span class="from">From</span>
+                        <span class="amount">£149</span>
+                    </div>
+                    <ul class="tier-card__features">
+                        <li>Everything in the Interim Service</li>
+                        <li>Air, fuel & pollen filter replacement</li>
+                        <li>Spark plug inspection</li>
+                        <li>Full brake & suspension check</li>
+                        <li>50-point inspection</li>
+                        <li>Battery & charging test</li>
+                    </ul>
+                    <a href="contact.html#booking" class="btn btn--primary btn--full">Book Full Service</a>
+                </div>
+
+                <!-- Major -->
+                <div class="tier-card">
+                    <h3 class="tier-card__name">Major Service</h3>
+                    <p class="tier-card__interval">Every 24 months / 24,000 miles</p>
+                    <div class="tier-card__price">
+                        <span class="from">From</span>
+                        <span class="amount">£229</span>
+                    </div>
+                    <ul class="tier-card__features">
+                        <li>Everything in the Full Service</li>
+                        <li>Spark plug replacement</li>
+                        <li>Brake fluid change</li>
+                        <li>Air-con check</li>
+                        <li>Comprehensive diagnostics</li>
+                        <li>Priority booking slot</li>
+                    </ul>
+                    <a href="contact.html#booking" class="btn btn--outline btn--full">Book Major</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À-la-carte Price Table -->
+    <section class="price-table-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Repairs & Extras</span>
+                <h2 class="section-title">Common Jobs & Typical Prices</h2>
+                <div class="title-bar"></div>
+            </div>
+
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Typical Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="item-name">Pre-MOT Check
+                            <span class="item-desc">Full inspection against DVSA standards</span></td>
+                        <td class="item-price"><span class="from-label">from</span>£40</td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">Diagnostic Check
+                            <span class="item-desc">ECU fault-code read & report</span></td>
+                        <td class="item-price"><span class="from-label">from</span>£45</td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">Air-Con Re-Gas
+                            <span class="item-desc">Recharge, sanitise & leak test</span></td>
+                        <td class="item-price"><span class="from-label">from</span>£59</td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">Brake Pads (per axle)
+                            <span class="item-desc">Front or rear, fitted</span></td>
+                        <td class="item-price"><span class="from-label">from</span>£89</td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">Brake Pads & Discs (per axle)
+                            <span class="item-desc">Pads and discs, fitted</span></td>
+                        <td class="item-price"><span class="from-label">from</span>£159</td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">Bodywork — Scratch & Scuff Repair
+                            <span class="item-desc">Per panel, colour-matched</span></td>
+                        <td class="item-price"><span class="from-label">from</span>£120</td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">Battery Supply & Fitting
+                            <span class="item-desc">Including disposal of old battery</span></td>
+                        <td class="item-price"><span class="from-label">from</span>£95</td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">Clutch, Gearbox & Exhaust
+                            <span class="item-desc">Varies widely by make & model</span></td>
+                        <td class="item-price">Quote</td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">Vehicle Valuation
+                            <span class="item-desc">Honest buy / sell valuation</span></td>
+                        <td class="item-price">Free</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="pricing-note">
+                <strong>Illustrative pricing.</strong> Prices shown are typical starting points and vary by vehicle make, model and parts required. You'll always receive a firm, no-obligation quote before any work begins — and you only pay once the job is done.
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="cta-band">
+        <div class="container cta-band__inner">
+            <h2>Want a price for your car?</h2>
+            <p>Send us your reg and what you need — we'll come back with a clear, no-obligation quote. No pressure, no jargon.</p>
+            <div class="cta-band__actions">
+                <a href="contact.html#booking" class="btn btn--primary btn--lg">Get a Quote</a>
+                <a href="services.html" class="btn btn--outline btn--lg">Browse Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__bottom">
+            <p>&copy; 2026 Homerton Car Repairs. All Rights Reserved. Address: Unit 7, Bison House, Sedgwick Street, Hackney, E9 6AA.</p>
+            <div class="weblift-brand">
+                <p>Website Redesign Concept by <a href="https://web-lift.co.uk" target="_blank" class="weblift-link">Web Lift</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="kitchen">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Your new website — a WebLift concept</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="concept-bar">
+    <span>A live concept by <strong>WebLift</strong> for <strong data-bind="biz">your business</strong> — built in a day</span>
+  </div>
+
+  <header class="hero">
+    <div class="hero__media">
+      <div class="hero__img" id="hero-img" role="img" aria-label="Recent work"></div>
+      <div class="hero__scrim"></div>
+    </div>
+    <div class="hero__content container">
+      <p class="hero__kicker reveal" data-bind="kicker">Kitchen design &amp; installation</p>
+      <h1 class="hero__title reveal" data-bind="biz">Your Business Name</h1>
+      <p class="hero__sub reveal"><span data-bind="tagline">Beautiful spaces, built properly.</span>
+        <span data-bind-wrap="loc"> Serving <span data-bind="loc">your area</span> and surrounds.</span></p>
+      <div class="hero__ctas reveal">
+        <a href="#contact" class="btn btn--solid">Get a free quote</a>
+        <a href="#work" class="btn btn--ghost">See recent work</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="trust">
+    <div class="container trust__row">
+      <span data-bind="trust1">Free design visits</span>
+      <span data-bind="trust2">Fully insured &amp; guaranteed</span>
+      <span data-bind="trust3">Rated 5★ by local homeowners</span>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <h2 class="section-title reveal">What we do</h2>
+      <div class="services__grid">
+        <article class="card reveal"><h3 data-bind="s1t">Service one</h3><p data-bind="s1d"></p></article>
+        <article class="card reveal"><h3 data-bind="s2t">Service two</h3><p data-bind="s2d"></p></article>
+        <article class="card reveal"><h3 data-bind="s3t">Service three</h3><p data-bind="s3d"></p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="work">
+    <div class="container">
+      <h2 class="section-title reveal">Recent work</h2>
+      <div class="gallery__grid">
+        <figure class="gallery__item reveal" data-img="1"></figure>
+        <figure class="gallery__item reveal" data-img="2"></figure>
+        <figure class="gallery__item reveal" data-img="3"></figure>
+        <figure class="gallery__item reveal" data-img="4"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="container">
+      <blockquote class="reveal" data-bind="quote">“The kitchen is the heart of the home — ours are built to prove it.”</blockquote>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container contact__grid">
+      <div class="reveal">
+        <h2 class="section-title">Tell us about your project</h2>
+        <p class="contact__lead">No pressure, no jargon — just an honest conversation about what you want and what it costs.</p>
+        <p class="contact__phone">Prefer to talk? <strong data-bind="phone-line">Call us — we answer.</strong></p>
+      </div>
+      <form class="contact__form reveal" onsubmit="return false;">
+        <label>Name<input type="text" placeholder="Your name"></label>
+        <label>Phone<input type="tel" placeholder="Your number"></label>
+        <label>Project<textarea rows="3" placeholder="What are you planning?"></textarea></label>
+        <button class="btn btn--solid" type="submit">Request my free quote</button>
+        <p class="contact__note">This is a design concept — the form isn’t wired up yet. The real one will be.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="weblift-bar">
+    <div class="container weblift-bar__row">
+      <p><strong>Like what you see?</strong> WebLift built this concept for <span data-bind="biz">you</span> in a day.
+        It’s yours — done-for-you, flat fee from £750.</p>
+      <a class="btn btn--light" href="https://web-lift.co.uk" target="_blank" rel="noopener">web-lift.co.uk</a>
+    </div>
+  </footer>
+
+  <script src="demo.js"></script>
+</body>
+</html>

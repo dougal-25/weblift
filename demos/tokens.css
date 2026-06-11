@@ -1,0 +1,73 @@
+/* WebLift demo page — design tokens.
+   One light premium palette; the accent + tint swap per niche theme
+   via [data-theme] on <html>. */
+
+:root {
+  /* type */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Outfit", -apple-system, sans-serif;
+  --fs-hero: clamp(2.6rem, 7.5vw, 5.2rem);
+  --fs-h2: clamp(1.7rem, 3.5vw, 2.6rem);
+  --fs-quote: clamp(1.4rem, 3vw, 2.1rem);
+  --fs-body: 1.05rem;
+  --fs-small: 0.85rem;
+
+  /* spacing scale */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.75rem;
+  --space-4: 3rem;
+  --space-5: 5.5rem;
+
+  /* shared neutrals */
+  --color-ink: #20242b;
+  --color-ink-soft: #5b6270;
+  --color-white: #ffffff;
+  --color-weblift: #15365e; /* footer bar only — WebLift brand navy */
+
+  /* motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-reveal: 0.9s;
+  --dur-kenburns: 22s;
+
+  --radius: 10px;
+  --maxw: 1180px;
+}
+
+/* per-niche accent + background tint */
+:root,
+[data-theme="kitchen"] {
+  --color-accent: #a65e2e;        /* copper */
+  --color-accent-dark: #7d4520;
+  --color-bg: #faf7f2;            /* cream */
+  --color-surface: #f1ebe2;
+  --color-band: #2a2018;          /* espresso band */
+}
+[data-theme="bathroom"] {
+  --color-accent: #2e6e73;        /* slate teal */
+  --color-accent-dark: #1f4e52;
+  --color-bg: #f6f9f9;            /* porcelain */
+  --color-surface: #e9f1f1;
+  --color-band: #16282a;
+}
+[data-theme="garden"] {
+  --color-accent: #2f5d3a;        /* deep green */
+  --color-accent-dark: #20422a;
+  --color-bg: #f5f4ee;            /* stone */
+  --color-surface: #eae8dd;
+  --color-band: #1d2b20;
+}
+[data-theme="driveway"] {
+  --color-accent: #c98a2d;        /* amber on graphite */
+  --color-accent-dark: #9c6a20;
+  --color-bg: #f2f2f0;
+  --color-surface: #e7e7e3;
+  --color-band: #26292e;
+}
+[data-theme="pool"] {
+  --color-accent: #1f6fa8;        /* azure */
+  --color-accent-dark: #155179;
+  --color-bg: #f4f9fc;
+  --color-surface: #e6f0f7;
+  --color-band: #122b3d;
+}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homerton Car Repairs | Premium Car Servicing & Bodywork Hackney</title>
+    <meta name="description" content="Hackney's trusted one-stop auto shop. Professional car repairs, servicing, bodywork, and pre-MOT testing in Homerton. Over 10 years of reliable service.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../tokens.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo__icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
+                        <circle cx="7" cy="17" r="2" />
+                        <path d="M9 17h6" />
+                        <circle cx="17" cy="17" r="2" />
+                    </svg>
+                </span>
+                <div class="logo__text">
+                    <span class="logo__brand">Homerton</span>
+                    <span class="logo__sub">Car Repairs</span>
+                </div>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link nav-link--active">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-contact">
+                <a href="tel:02089869160" class="phone-link">
+                    <span class="phone-link__icon">📞</span>
+                    <div class="phone-link__details">
+                        <span class="phone-label">Call Shop</span>
+                        <span class="phone-num">020 8986 9160</span>
+                    </div>
+                </a>
+                <a href="contact.html#booking" class="btn btn--primary">Book Now</a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__links">
+            <a href="index.html" class="mobile-menu__link mobile-menu__link--active">Home</a>
+            <a href="services.html" class="mobile-menu__link">Services</a>
+            <a href="pricing.html" class="mobile-menu__link">Pricing</a>
+            <a href="about.html" class="mobile-menu__link">About</a>
+            <a href="contact.html" class="mobile-menu__link">Contact</a>
+            <div class="mobile-menu__phones">
+                <a href="tel:02089869160" class="mobile-phone">📞 Shop: 020 8986 9160</a>
+                <a href="tel:07930157822" class="mobile-phone">📱 Mobile: 07930 157 822</a>
+            </div>
+            <a href="contact.html#booking" class="btn btn--primary btn--full">Book Appointment</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__bg-container">
+            <img src="assets/hero-bg.png" alt="Modern clean car repair workshop" class="hero__bg">
+            <div class="hero__overlay"></div>
+        </div>
+        <div class="container hero__content">
+            <div class="hero__badge">
+                <span class="badge-dot"></span> Established Over 10 Years in Hackney
+            </div>
+            <h1 class="hero__title">East London's Trusted <br><span class="highlight">Auto Care Specialists</span></h1>
+            <p class="hero__lead">
+                Professional car repairs, servicing, and pre-MOT diagnostics in Homerton. Fast turnarounds, transparent pricing, and quality mechanics you can count on.
+            </p>
+
+            <!-- Registration Search Tool Mockup -->
+            <div class="hero__cta-box">
+                <div class="reg-finder">
+                    <div class="reg-input-wrapper">
+                        <div class="reg-gb-bar">GB</div>
+                        <input type="text" class="reg-input" placeholder="ENTER REG" aria-label="Enter registration number" maxlength="8">
+                    </div>
+                    <button class="reg-btn" type="button" onclick="goToBooking()">
+                        Get Started <span class="arrow">&rarr;</span>
+                    </button>
+                </div>
+                <p class="cta-box-sub">Enter your registration to check details and book a service</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Band / Stats -->
+    <section class="trust-band">
+        <div class="container trust-band__grid">
+            <div class="trust-item">
+                <div class="trust-item__icon">🔧</div>
+                <div class="trust-item__content">
+                    <h3>10+ Years</h3>
+                    <p>Dependable Service</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-item__icon">🛡️</div>
+                <div class="trust-item__content">
+                    <h3>100% Honest</h3>
+                    <p>Transparent Pricing</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-item__icon">⭐</div>
+                <div class="trust-item__content">
+                    <h3>Rated 4.8/5</h3>
+                    <p>Hackney Local Choice</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-item__icon">⚡</div>
+                <div class="trust-item__content">
+                    <h3>Fast Turnaround</h3>
+                    <p>Get back on the road</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Teaser -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What We Do</span>
+                <h2 class="section-title">Our Professional Auto Services</h2>
+                <div class="title-bar"></div>
+                <p class="section-lead">Based in the heart of Hackney, we offer competitive rates and practical timescales across a comprehensive range of mechanical and cosmetic garage services.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card__icon-wrapper">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 8v4l3 3"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Car Servicing</h3>
+                    <p class="service-card__description">Interim and full car servicing to maintain peak engine efficiency, maximize fuel economy, and preserve your vehicle's service history.</p>
+                    <ul class="service-card__features">
+                        <li>Oil & filter replacement</li>
+                        <li>Full fluid inspections</li>
+                        <li>Spark plug & air filter check</li>
+                    </ul>
+                    <a href="services.html#servicing" class="service-card__link">Learn More &rarr;</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__icon-wrapper">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Car Repairs</h3>
+                    <p class="service-card__description">From engine faults to suspension wear, our diagnostic mechanics use advanced tools to identify issues and execute reliable repairs.</p>
+                    <ul class="service-card__features">
+                        <li>Brakes, pads & discs</li>
+                        <li>Exhausts & battery fittings</li>
+                        <li>Gearbox & clutch repairs</li>
+                    </ul>
+                    <a href="services.html#repairs" class="service-card__link">Learn More &rarr;</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__icon-wrapper">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M5 3h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2z"/>
+                            <path d="M7 7h10M7 12h10M7 17h5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Pre-MOT Check</h3>
+                    <p class="service-card__description">Ensure your vehicle passes the MOT test first time. We check all critical safety systems according to latest UK MOT standards.</p>
+                    <ul class="service-card__features">
+                        <li>Emissions & exhaust scan</li>
+                        <li>Brakes & suspension checks</li>
+                        <li>Lights, indicators & wiper check</li>
+                    </ul>
+                    <a href="services.html#mot" class="service-card__link">Learn More &rarr;</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__icon-wrapper">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Car Bodywork</h3>
+                    <p class="service-card__description">Sleek, high-quality bodywork and paint restoration. We fix scuffs, minor scratches, major dents, and collision damage with precision.</p>
+                    <ul class="service-card__features">
+                        <li>Scratches & scuffs repair</li>
+                        <li>Dent removal & panel repair</li>
+                        <li>Accident damage restoration</li>
+                    </ul>
+                    <a href="services.html#bodywork" class="service-card__link">Learn More &rarr;</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__icon-wrapper">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Air Con & Electricals</h3>
+                    <p class="service-card__description">Complete air conditioning re-gassing and sanitation, alongside expert diagnostic testing for electrical and engine wiring issues.</p>
+                    <ul class="service-card__features">
+                        <li>Air conditioning re-gassing</li>
+                        <li>ECU computer diagnostics</li>
+                        <li>Wiring & starter motor repair</li>
+                    </ul>
+                    <a href="services.html#aircon" class="service-card__link">Learn More &rarr;</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__icon-wrapper">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Buy & Sell Cars</h3>
+                    <p class="service-card__description">Looking for a reliable second-hand vehicle, or want to sell your current car? Speak to our team for honest valuations and local options.</p>
+                    <ul class="service-card__features">
+                        <li>Fair market valuations</li>
+                        <li>Hassle-free vehicle sales</li>
+                        <li>Vetted, reliable stock</li>
+                    </ul>
+                    <a href="services.html#buysell" class="service-card__link">Learn More &rarr;</a>
+                </div>
+            </div>
+
+            <div class="section-footer-link">
+                <a href="services.html" class="btn btn--secondary btn--lg">View All Services &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Strip -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Why Homerton Car Repairs</span>
+                <h2 class="section-title">A Garage You Can Actually Trust</h2>
+                <div class="title-bar"></div>
+            </div>
+            <div class="why-us__grid">
+                <div class="why-card">
+                    <div class="why-card__icon">💷</div>
+                    <h3>Upfront Pricing</h3>
+                    <p>You get a clear quote before any work begins — no surprise charges when you collect your car.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card__icon">🗣️</div>
+                    <h3>No Jargon</h3>
+                    <p>We explain exactly what needs fixing in plain English, so you can make the call with confidence.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card__icon">🔧</div>
+                    <h3>Skilled Mechanics</h3>
+                    <p>Certified, friendly pros who know modern vehicle electrics and mechanical systems inside out.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card__icon">📍</div>
+                    <h3>Local & Independent</h3>
+                    <p>A genuine Hackney garage — no dealer premiums, no agency fees, just honest local service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="cta-band">
+        <div class="container cta-band__inner">
+            <h2>Ready to get your car sorted?</h2>
+            <p>Book a service or request a no-obligation repair quote. We'll call you back within the hour to confirm.</p>
+            <div class="cta-band__actions">
+                <a href="contact.html#booking" class="btn btn--primary btn--lg">Book Online</a>
+                <a href="pricing.html" class="btn btn--outline btn--lg">View Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__bottom">
+            <p>&copy; 2026 Homerton Car Repairs. All Rights Reserved. Address: Unit 7, Bison House, Sedgwick Street, Hackney, E9 6AA.</p>
+            <div class="weblift-brand">
+                <p>Website Redesign Concept by <a href="https://web-lift.co.uk" target="_blank" class="weblift-link">Web Lift</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
