@@ -10,8 +10,10 @@ Done-for-you website redesigns for local small businesses. One flat fee (from £
 
 ## Prospect mockup workflow
 We cold-call local businesses; interested ones get a redesign mockup, then pitch → buy.
-- **New prospect:** `cp -r mockups/_starter mockups/<slug>` — the template links the kit with correct paths.
-- A mockup carries only prospect content + a small `style.css` (component/brand overrides) + a `prospect.md` (pipeline status).
+- **Mockups are segmented by niche:** `mockups/<niche>/<slug>/` (e.g. `mockups/home-improvement/`, `mockups/garages/`). Each niche folder has a `README.md`; the niche-agnostic template lives at `mockups/_starter/`.
+- **New prospect:** from inside the niche folder, `cp -r ../_starter <slug>`. The template links the kit with the correct depth for niche-nested prospects (`../../../kit/`).
+- **Primary niche:** home-improvement trades (kitchen/bathroom fitters, builders, landscapers, roofers) — they already buy leads, so the ROI pitch lands. Garages were the first niche tried (live leads, no conversions); see `wiki/research/niche_selection.md`.
+- A mockup carries only prospect content + a small `style.css` (component/brand overrides) + a `prospect.md` (pipeline status). Prospect photos go in `<slug>/assets/` — so **assets segment by niche automatically**.
 - **Never fork the kit CSS** into a mockup — override variables in the mockup's `style.css` instead.
 - **No deleting to save space** — storage isn't the constraint; git history is the archive. When a prospect dies, `git rm` the folder.
 - Why this structure: `wiki/decisions/0001_shared_kit_per_prospect_mockups.md`.

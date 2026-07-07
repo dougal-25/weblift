@@ -20,12 +20,37 @@ mockups over time, most of which never convert. Two worries surfaced:
 - A `kit/` folder holds the reusable foundation — `tokens.css`, `base.css`, `animations.css`,
   `reveal.js` — as the **single source of truth**. The business site and every mockup *link*
   these files; nobody copies them.
-- Each prospect is a folder `mockups/<slug>/` built from `mockups/_starter/` (`cp -r`). It
-  carries only prospect-specific content + a small `style.css` of component/brand overrides,
-  plus a `prospect.md` tracking pipeline status (cold → called → interested → mockup → pitched
-  → won/lost).
+- Each prospect is a folder built from `mockups/_starter/` (`cp -r`). It carries only
+  prospect-specific content + a small `style.css` of component/brand overrides, plus a
+  `prospect.md` tracking pipeline status (cold → called → interested → mockup → pitched →
+  won/lost).
 - No deletion policy. Git history is the archive: when a prospect dies, `git rm` the folder —
   it leaves the working tree but stays recoverable forever.
+
+### Amendment (2026-06-04) — segment prospects by niche
+
+Web Lift targets one niche at a time (garages first; now home-improvement trades — see
+`wiki/research/niche_selection.md`). Prospects are therefore nested **one level deeper**, under
+a niche folder:
+
+```
+mockups/
+  _starter/                      ← niche-agnostic template (stays at top level)
+  garages/                       ← niche folder (has its own README.md)
+    _demo-garage/  gs-garage/  homerton-car-repairs/  mworks/
+  home-improvement/              ← current primary niche
+    <prospect-slug>/
+```
+
+- Prospect photos live in `<niche>/<slug>/assets/`, so **assets segment by niche
+  automatically** — they travel with the prospect, no separate asset tree to keep in sync.
+- **Depth gotcha (the thing that silently breaks):** prospects now sit two levels under
+  `mockups/`, so they link the kit as `../../../kit/...` (was `../../kit/`) and the root
+  site's `assets/` as `../../../assets/...`. The four garage mockups + `_starter` were rewritten
+  to this depth on 2026-06-04. `_starter` is calibrated for niche-nested depth — `cp -r ../_starter <slug>`
+  from inside a niche folder produces correct paths. (Trade-off: `_starter` won't render if
+  previewed in place at `mockups/_starter/`; it's a template, not a served page.)
+- New prospect: `cd mockups/<niche>/ && cp -r ../_starter <slug>`.
 
 ## Why
 

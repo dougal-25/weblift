@@ -1,7 +1,7 @@
 /* ============================================================
    PROSPECT MOCKUP — component + brand layer
    Foundation (palette, type, spacing, motion) comes from
-   ../../kit/tokens.css + base.css. Override only what's
+   ../../../kit/tokens.css + base.css. Override only what's
    prospect-specific here. Never hardcode hex/px — use var().
    ============================================================ */
 

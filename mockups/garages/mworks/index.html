@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MWorks UK — MOT, Servicing & Bodyshop in East London (E2)</title>
+  <meta name="description" content="MWorks UK — MOT centre, car servicing and bodyshop on Clare St, London E2. 20 years' experience, 4.9★ on Google. Book your MOT today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/logo.png" />
+  <!-- Web Lift shared kit — linked, never copied -->
+  <link rel="stylesheet" href="../../../kit/tokens.css" />
+  <link rel="stylesheet" href="../../../kit/base.css" />
+  <link rel="stylesheet" href="../../../kit/animations.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Nav ===== -->
+  <!-- Top utility bar -->
+  <div class="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__left">
+        <a href="tel:+447595596851"><span class="strong">📞 07595 596851</span></a>
+        <span class="topbar__sep" aria-hidden="true">·</span>
+        <span class="topbar__hours">🕒 Mon–Sat 10am–7pm</span>
+        <span class="topbar__sep topbar__loc" aria-hidden="true">·</span>
+        <span class="topbar__loc">📍 295 Clare St, E2</span>
+        <span class="topbar__sep topbar__rating" aria-hidden="true">·</span>
+        <span class="topbar__rating"><span class="stars">★</span> 4.9 (160 reviews)</span>
+      </div>
+      <a href="contact.html#book" class="btn btn--sm topbar__cta">Book your MOT →</a>
+    </div>
+  </div>
+
+  <!-- Main nav -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="MWorks UK home">
+        <img class="nav__logo-img" src="assets/logo-crop.png" alt="MWorks UK — Total Vehicle Solutions" />
+      </a>
+      <nav class="nav__links" id="navlinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html#book" class="btn btn--royal nav__cta">Book your MOT</a>
+      <button class="nav__burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">☰</button>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero__media"><img src="assets/workshop-arch.jpg" alt="Inside the MWorks workshop — a car on the MOT ramp under the brick railway arches" /></div>
+    <div class="hero__inner">
+      <div class="hero__text">
+      <h1 class="hero__title" data-reveal>MOT, servicing &amp; <em>bodyshop</em>, done properly.</h1>
+      <p class="hero__sub" data-reveal>Your independent East London garage on Clare St, E2. Twenty years keeping cars safe, sharp and on the road — from MOTs to full resprays.</p>
+      <div class="hero__cta" data-reveal>
+        <a href="contact.html#book" class="btn btn--royal btn--lg">Book your MOT <span aria-hidden="true">→</span></a>
+        <a href="services.html" class="btn btn--ghost-light btn--lg">See what we do</a>
+      </div>
+      <div class="hero__rating" data-reveal>
+        <span class="stars">★★★★★</span> <strong>4.9</strong> · 160 Google reviews
+      </div>
+      </div><!-- /hero__text -->
+
+      <!-- Quick-booking widget (demo — submits to contact form) -->
+      <form class="bookbar" data-reveal onsubmit="event.preventDefault(); window.location.href='contact.html#book';">
+        <div class="bookbar__title">⚡ Quick booking — tell us about your car</div>
+        <div class="bookbar__field">
+          <label for="reg">Reg number</label>
+          <input id="reg" class="reg" type="text" placeholder="AB12 CDE" maxlength="8" autocomplete="off" />
+        </div>
+        <div class="bookbar__field">
+          <label for="svc">What do you need?</label>
+          <select id="svc">
+            <option>MOT</option>
+            <option>MOT + Service</option>
+            <option>Service</option>
+            <option>Repair / diagnostics</option>
+            <option>Bodywork / respray</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn--royal btn--lg">Get started →</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Trust strip ===== -->
+  <div class="trust">
+    <div class="trust__row">
+      <span class="trust__item"><span class="stars">★★★★★</span> <strong>4.9</strong> on Google</span>
+      <span class="trust__sep" aria-hidden="true">|</span>
+      <span class="trust__item"><strong>20 years'</strong> experience</span>
+      <span class="trust__sep" aria-hidden="true">|</span>
+      <span class="trust__item"><strong>MOT</strong> test centre</span>
+      <span class="trust__sep" aria-hidden="true">|</span>
+      <span class="trust__item"><strong>All makes</strong> &amp; models</span>
+    </div>
+  </div>
+
+  <!-- ===== Services overview ===== -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">What we do</span>
+        <h2 class="section-title">One garage. The whole car.</h2>
+        <p class="lead">MOT, mechanical and bodywork all under one roof — no being sent across town.</p>
+      </div>
+      <div class="svc-grid" data-stagger="0.1">
+        <article class="svc" data-reveal>
+          <div class="svc__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/><circle cx="12" cy="12" r="10"/></svg></div>
+          <h3>MOT testing</h3>
+          <p>Class 4 MOTs while you wait, with honest advice on what actually needs doing.</p>
+        </article>
+        <article class="svc" data-reveal>
+          <div class="svc__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 005.4-5.4l-2.3 2.3-2-2 2.3-2.3z"/></svg></div>
+          <h3>Servicing &amp; repairs</h3>
+          <p>Full and interim services, brakes, suspension, diagnostics, batteries — all makes.</p>
+        </article>
+        <article class="svc" data-reveal>
+          <div class="svc__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
+          <h3>Bodyshop &amp; respray</h3>
+          <p>Dents, scratches, scuffs, accident damage, alloy refurb and full resprays — to a high finish.</p>
+        </article>
+        <article class="svc" data-reveal>
+          <div class="svc__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 13l2-5a2 2 0 012-1h10a2 2 0 012 1l2 5"/><path d="M5 13h14v5a1 1 0 01-1 1h-2a1 1 0 01-1-1v-1H9v1a1 1 0 01-1 1H6a1 1 0 01-1-1v-5z"/><circle cx="7.5" cy="16" r="1"/><circle cx="16.5" cy="16" r="1"/></svg></div>
+          <h3>Modification &amp; detailing</h3>
+          <p>Fabrication, audio installs, caliper refinishing and smart repairs for something special.</p>
+        </article>
+      </div>
+      <div style="text-align:center;margin-top:var(--space-7)" data-reveal>
+        <a href="services.html" class="btn btn--royal btn--lg">All services &amp; details →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why MWorks (feature split) ===== -->
+  <section class="section section--cream">
+    <div class="wrap">
+      <div class="feat">
+        <div class="feat__media" data-reveal="left"><img src="assets/morgan-ramp.jpg" alt="A classic green Morgan on the ramp in the MWorks brick-arch workshop" /></div>
+        <div class="feat__body" data-reveal="right">
+          <span class="eyebrow">Why MWorks</span>
+          <h2>Specialists who treat your car like their own.</h2>
+          <p>From a quick MOT to an almost-written-off car brought back to life, we do the lot — properly, and at a fair price. Our customers come back because we tell them straight.</p>
+          <ul class="featlist">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Honest, transparent pricing — no surprises</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> MOT, mechanical &amp; bodywork in one place</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Everything from daily runabouts to Porsches</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 4.9★ from 160 local drivers</li>
+          </ul>
+          <a href="about.html" class="btn btn--royal">More about us →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Reviews ===== -->
+  <section class="section section--espresso">
+    <div class="wrap">
+      <div class="grev" data-reveal>
+        <div class="grev__score">4.9</div>
+        <div class="stars">★★★★★</div>
+        <div class="grev__meta">Rated <strong>4.9</strong> from <strong>160 reviews</strong> on Google</div>
+      </div>
+      <div class="reviews" data-stagger="0.08">
+        <article class="review" data-reveal>
+          <div class="stars">★★★★★</div>
+          <p class="review__text">"100% recommend. I took my car in almost written off and the guys worked their magic. Fahim was a pleasure to deal with — got the car SPOTLESS and for a good price. Can't thank them enough."</p>
+          <div class="review__head">
+            <div class="review__avatar">C</div>
+            <div class="review__who"><div class="review__name">Cdr</div>
+              <div class="review__src"><svg class="gicon" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45 24c0-1.6-.1-2.7-.4-3.9H24v7.1h12c-.2 1.8-1.5 4.6-4.4 6.5l6.7 5.2C42.6 41.5 45 35.5 45 24z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-6.9-5.4c-1.9 1.3-4.3 2.1-7.6 2.1-5.8 0-10.7-3.9-12.5-9.2l-7.1 5.5C7.5 41.1 15.1 46 24 46z"/><path fill="#FBBC05" d="M11.5 28.2c-.5-1.4-.7-2.9-.7-4.2s.3-2.9.7-4.2l-7.1-5.5C2.9 17.1 2 20.4 2 24s.9 6.9 2.4 9.7l7.1-5.5z"/><path fill="#EA4335" d="M24 10.7c3.3 0 5.5 1.4 6.8 2.6l5.9-5.8C33.1 4.1 28.9 2 24 2 15.1 2 7.5 6.9 4.4 14.3l7.1 5.5C13.3 14.6 18.2 10.7 24 10.7z"/></svg> Google review</div>
+            </div>
+          </div>
+        </article>
+        <article class="review" data-reveal>
+          <div class="stars">★★★★★</div>
+          <p class="review__text">"They were absolutely incredible with how quickly they got my broken-down Peugeot into the garage, diagnostic done and completely fixed — all within 24 hours. Lifesavers."</p>
+          <div class="review__head">
+            <div class="review__avatar">C</div>
+            <div class="review__who"><div class="review__name">Chloé Palmer</div>
+              <div class="review__src"><svg class="gicon" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45 24c0-1.6-.1-2.7-.4-3.9H24v7.1h12c-.2 1.8-1.5 4.6-4.4 6.5l6.7 5.2C42.6 41.5 45 35.5 45 24z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-6.9-5.4c-1.9 1.3-4.3 2.1-7.6 2.1-5.8 0-10.7-3.9-12.5-9.2l-7.1 5.5C7.5 41.1 15.1 46 24 46z"/><path fill="#FBBC05" d="M11.5 28.2c-.5-1.4-.7-2.9-.7-4.2s.3-2.9.7-4.2l-7.1-5.5C2.9 17.1 2 20.4 2 24s.9 6.9 2.4 9.7l7.1-5.5z"/><path fill="#EA4335" d="M24 10.7c3.3 0 5.5 1.4 6.8 2.6l5.9-5.8C33.1 4.1 28.9 2 24 2 15.1 2 7.5 6.9 4.4 14.3l7.1 5.5C13.3 14.6 18.2 10.7 24 10.7z"/></svg> Google review</div>
+            </div>
+          </div>
+        </article>
+        <article class="review" data-reveal>
+          <div class="stars">★★★★★</div>
+          <p class="review__text">"I only trust this lot with my vehicles — it's hard to find an honest mechanic these days. I've used them for over 10 years and drive over an hour to get to them."</p>
+          <div class="review__head">
+            <div class="review__avatar">R</div>
+            <div class="review__who"><div class="review__name">Rukon Miah</div>
+              <div class="review__src"><svg class="gicon" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45 24c0-1.6-.1-2.7-.4-3.9H24v7.1h12c-.2 1.8-1.5 4.6-4.4 6.5l6.7 5.2C42.6 41.5 45 35.5 45 24z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-6.9-5.4c-1.9 1.3-4.3 2.1-7.6 2.1-5.8 0-10.7-3.9-12.5-9.2l-7.1 5.5C7.5 41.1 15.1 46 24 46z"/><path fill="#FBBC05" d="M11.5 28.2c-.5-1.4-.7-2.9-.7-4.2s.3-2.9.7-4.2l-7.1-5.5C2.9 17.1 2 20.4 2 24s.9 6.9 2.4 9.7l7.1-5.5z"/><path fill="#EA4335" d="M24 10.7c3.3 0 5.5 1.4 6.8 2.6l5.9-5.8C33.1 4.1 28.9 2 24 2 15.1 2 7.5 6.9 4.4 14.3l7.1 5.5C13.3 14.6 18.2 10.7 24 10.7z"/></svg> Google review</div>
+            </div>
+          </div>
+        </article>
+        <article class="review" data-reveal>
+          <div class="stars">★★★★★</div>
+          <p class="review__text">"Highly recommend for fast, efficient MOT and brakes. Fahim is friendly and explains everything in detail — my worn brake pads were even shown to me. Honest service."</p>
+          <div class="review__head">
+            <div class="review__avatar">A</div>
+            <div class="review__who"><div class="review__name">Amar Sharif</div>
+              <div class="review__src"><svg class="gicon" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45 24c0-1.6-.1-2.7-.4-3.9H24v7.1h12c-.2 1.8-1.5 4.6-4.4 6.5l6.7 5.2C42.6 41.5 45 35.5 45 24z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-6.9-5.4c-1.9 1.3-4.3 2.1-7.6 2.1-5.8 0-10.7-3.9-12.5-9.2l-7.1 5.5C7.5 41.1 15.1 46 24 46z"/><path fill="#FBBC05" d="M11.5 28.2c-.5-1.4-.7-2.9-.7-4.2s.3-2.9.7-4.2l-7.1-5.5C2.9 17.1 2 20.4 2 24s.9 6.9 2.4 9.7l7.1-5.5z"/><path fill="#EA4335" d="M24 10.7c3.3 0 5.5 1.4 6.8 2.6l5.9-5.8C33.1 4.1 28.9 2 24 2 15.1 2 7.5 6.9 4.4 14.3l7.1 5.5C13.3 14.6 18.2 10.7 24 10.7z"/></svg> Google review</div>
+            </div>
+          </div>
+        </article>
+        <article class="review" data-reveal>
+          <div class="stars">★★★★★</div>
+          <p class="review__text">"I drove all the way from Hornchurch to MWorks. I'd had poor service from other garages for years — they booked me in, ordered all the parts before I arrived and sorted my Mercedes properly."</p>
+          <div class="review__head">
+            <div class="review__avatar">M</div>
+            <div class="review__who"><div class="review__name">Mo Ahmed</div>
+              <div class="review__src"><svg class="gicon" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45 24c0-1.6-.1-2.7-.4-3.9H24v7.1h12c-.2 1.8-1.5 4.6-4.4 6.5l6.7 5.2C42.6 41.5 45 35.5 45 24z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-6.9-5.4c-1.9 1.3-4.3 2.1-7.6 2.1-5.8 0-10.7-3.9-12.5-9.2l-7.1 5.5C7.5 41.1 15.1 46 24 46z"/><path fill="#FBBC05" d="M11.5 28.2c-.5-1.4-.7-2.9-.7-4.2s.3-2.9.7-4.2l-7.1-5.5C2.9 17.1 2 20.4 2 24s.9 6.9 2.4 9.7l7.1-5.5z"/><path fill="#EA4335" d="M24 10.7c3.3 0 5.5 1.4 6.8 2.6l5.9-5.8C33.1 4.1 28.9 2 24 2 15.1 2 7.5 6.9 4.4 14.3l7.1 5.5C13.3 14.6 18.2 10.7 24 10.7z"/></svg> Google review</div>
+            </div>
+          </div>
+        </article>
+        <article class="review" data-reveal>
+          <div class="stars">★★★★★</div>
+          <p class="review__text">"Super helpful. I turned up with no appointment, couldn't get my petrol cap open and was running on empty. They saw me straight away, got it open and didn't charge me. Life saver!"</p>
+          <div class="review__head">
+            <div class="review__avatar">J</div>
+            <div class="review__who"><div class="review__name">Jasmine Brown</div>
+              <div class="review__src"><svg class="gicon" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45 24c0-1.6-.1-2.7-.4-3.9H24v7.1h12c-.2 1.8-1.5 4.6-4.4 6.5l6.7 5.2C42.6 41.5 45 35.5 45 24z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-6.9-5.4c-1.9 1.3-4.3 2.1-7.6 2.1-5.8 0-10.7-3.9-12.5-9.2l-7.1 5.5C7.5 41.1 15.1 46 24 46z"/><path fill="#FBBC05" d="M11.5 28.2c-.5-1.4-.7-2.9-.7-4.2s.3-2.9.7-4.2l-7.1-5.5C2.9 17.1 2 20.4 2 24s.9 6.9 2.4 9.7l7.1-5.5z"/><path fill="#EA4335" d="M24 10.7c3.3 0 5.5 1.4 6.8 2.6l5.9-5.8C33.1 4.1 28.9 2 24 2 15.1 2 7.5 6.9 4.4 14.3l7.1 5.5C13.3 14.6 18.2 10.7 24 10.7z"/></svg> Google review</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Location + hours teaser ===== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Find us</span>
+        <h2 class="section-title">Right by Hackney Road, E2</h2>
+      </div>
+      <div class="locate">
+        <iframe class="locate__map" data-reveal="left" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=295+Clare+St+London+E2+9HD&output=embed"
+          title="Map showing MWorks at 295 Clare St, London E2 9HD"></iframe>
+        <div class="infocard" data-reveal="right">
+          <h3>MWorks UK</h3>
+          <div class="info-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>290 &amp; 295 Clare St<br>London E2 9HD</span></div>
+          <div class="info-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2H7a2 2 0 012 1.7c.1.9.4 1.8.7 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.8.3 1.7.6 2.6.7A2 2 0 0122 16.9z"/></svg><span><a href="tel:+447595596851">07595 596851</a> · <a href="tel:+447415092975">07415 092975</a></span></div>
+          <ul class="hours">
+            <li><span>Mon – Sat</span><span>10:00 – 19:00</span></li>
+            <li><span>Sunday</span><span class="closed">Closed</span></li>
+          </ul>
+          <a href="contact.html#book" class="btn btn--royal btn--block" style="margin-top:var(--space-5)">Book your MOT</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA band ===== -->
+  <section class="cta-band">
+    <div class="cta-band__inner" data-reveal>
+      <h2>Need an MOT or a repair?</h2>
+      <p>Call the workshop or drop us a message — we'll get you booked in fast.</p>
+      <a href="contact.html#book" class="btn btn--royal btn--lg">Book your MOT →</a>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <div>
+          <img class="footer__logo-img" src="assets/logo-white.png" alt="MWorks UK" />
+          <p class="footer__tag">Independent MOT centre, servicing garage and bodyshop on Clare St, East London E2.</p>
+        </div>
+        <div><h4>Visit</h4><ul>
+          <li>290 &amp; 295 Clare St</li><li>London E2 9HD</li>
+          <li>Mon–Sat 10am–7pm</li>
+        </ul></div>
+        <div><h4>Pages</h4><ul>
+          <li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+        </ul></div>
+        <div><h4>Get in touch</h4><ul>
+          <li><a href="tel:+447595596851">07595 596851</a></li>
+          <li><a href="tel:+447415092975">07415 092975</a></li>
+          <li><a href="mailto:info@mworksuk.co.uk">info@mworksuk.co.uk</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">© <span id="year">2026</span> MWorks UK. Site by <a href="https://web-lift.co.uk">Web Lift</a>.</div>
+    </div>
+  </footer>
+
+  <script src="../../../kit/reveal.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>

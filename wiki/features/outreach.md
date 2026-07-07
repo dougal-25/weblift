@@ -33,6 +33,6 @@ Web Lift's pitch is uniquely **demonstrable**. You can literally show a prospect
 - Which trade vertical responds best (informs the niche-down decision in the spec).
 
 ## Open questions
-- Which vertical to target first? (Trades likely highest pain + highest value-per-call.)
-- Build the prospecting list manually first, or tool it up (scrape Maps) once the pitch is proven?
+- ~~Which vertical to target first?~~ **RESOLVED 2026-06-04:** high-ticket home-improvement trades (they already buy leads, so the ROI pitch is pre-sold). Garages tried first → live leads, no conversions. Full rationale: [niche selection research](../research/niche_selection.md).
+- Build the prospecting list manually first, or tool it up (scrape Maps/LinkedIn) once the pitch is proven? **Direction:** prove the home-improvement pitch by hand first, then automate scraping — and bake TPS/CTPS screening into that pipeline (see compliance note in the research page). **Automation now specced:** [Outbound Lead Machine (n8n)](outbound_lead_machine.md) — sources trades → Claude audit → review queue (never auto-sends).
 - Loom audits are time-intensive — at what volume do we templatise or semi-automate them?

@@ -18,6 +18,7 @@ Catalogue of every wiki page. Updated whenever a page is added/renamed/removed.
 - [Local SMB Owner](local_smb.md) — the plumber/cafe/gym owner
 
 ## Research
+- [Niche selection](niche_selection.md) — **why we target home-improvement trades** (the "do they buy leads?" filter; garages ruled out); cold-call reachability + TPS/CTPS compliance
 - [Reference: cheapwebdesign.co.uk](reference_cheapwebdesign.md) — design teardown (look we're replicating)
 - [Jack Roberts — wireframe-first workflow](jack_roberts_wireframe_workflow.md) — "substance first, then style"; 5 intake questions + research→wireframe→build→animate→host pipeline (video transcript)
 

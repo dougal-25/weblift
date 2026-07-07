@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Book — MWorks UK, 295 Clare St, London E2 9HD</title>
+  <meta name="description" content="Book your MOT, service or bodywork at MWorks UK, 295 Clare St, London E2 9HD. Call 07595 596851 or send an enquiry. Open Mon–Sat 10am–7pm." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="../../../kit/tokens.css" />
+  <link rel="stylesheet" href="../../../kit/base.css" />
+  <link rel="stylesheet" href="../../../kit/animations.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top utility bar -->
+  <div class="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__left">
+        <a href="tel:+447595596851"><span class="strong">📞 07595 596851</span></a>
+        <span class="topbar__sep" aria-hidden="true">·</span>
+        <span class="topbar__hours">🕒 Mon–Sat 10am–7pm</span>
+        <span class="topbar__sep topbar__loc" aria-hidden="true">·</span>
+        <span class="topbar__loc">📍 295 Clare St, E2</span>
+        <span class="topbar__sep topbar__rating" aria-hidden="true">·</span>
+        <span class="topbar__rating"><span class="stars">★</span> 4.9 (160 reviews)</span>
+      </div>
+      <a href="#book" class="btn btn--sm topbar__cta">Book your MOT →</a>
+    </div>
+  </div>
+
+  <!-- Main nav -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="MWorks UK home">
+        <img class="nav__logo-img" src="assets/logo-crop.png" alt="MWorks UK — Total Vehicle Solutions" />
+      </a>
+      <nav class="nav__links" id="navlinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <a href="#book" class="btn btn--royal nav__cta">Book your MOT</a>
+      <button class="nav__burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">☰</button>
+    </div>
+  </header>
+
+  <section class="phead">
+    <div class="wrap">
+      <div class="phead__crumb">Contact &amp; book</div>
+      <h1 class="phead__title">Book your car in</h1>
+      <p>Call the workshop or send us a message — tell us what your car needs and we'll get you booked in fast.</p>
+    </div>
+  </section>
+
+  <section class="section" id="book">
+    <div class="wrap">
+      <div class="contact-grid">
+        <!-- Form -->
+        <div data-reveal="left">
+          <h2 style="font-size:var(--fs-h3);margin-bottom:var(--space-4)">Send an enquiry</h2>
+          <form class="cform" onsubmit="event.preventDefault(); this.reset(); document.getElementById('formok').hidden=false;">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" required placeholder="Full name" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" required placeholder="Mobile number" />
+            </div>
+            <div class="field">
+              <label for="service">What do you need?</label>
+              <select id="service" name="service">
+                <option>MOT</option><option>Service</option><option>Repair / diagnostics</option>
+                <option>Bodywork / respray</option><option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="msg">Details (car make &amp; model, what's up)</label>
+              <textarea id="msg" name="msg" placeholder="e.g. 2016 Golf, MOT due next week"></textarea>
+            </div>
+            <button type="submit" class="btn btn--royal btn--lg">Send enquiry →</button>
+            <p class="form-note" id="formok" hidden>✓ Thanks — we'll be in touch shortly. (Demo form — not yet connected.)</p>
+            <p class="form-note">Prefer to talk? Call <a href="tel:+447595596851">07595 596851</a>.</p>
+          </form>
+        </div>
+
+        <!-- Info + map -->
+        <div data-reveal="right">
+          <div class="infocard" style="margin-bottom:var(--space-5)">
+            <h3>MWorks UK</h3>
+            <div class="info-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>290 &amp; 295 Clare St, London E2 9HD<br><span class="muted">Just off Hackney Road, by Cambridge Heath</span></span></div>
+            <div class="info-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2H7a2 2 0 012 1.7c.1.9.4 1.8.7 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.8.3 1.7.6 2.6.7A2 2 0 0122 16.9z"/></svg><span><strong>MOT &amp; service:</strong> <a href="tel:+447415092975">07415 092975</a><br><strong>Bodyshop:</strong> <a href="tel:+447595596851">07595 596851</a></span></div>
+            <div class="info-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg><span><a href="mailto:info@mworksuk.co.uk">info@mworksuk.co.uk</a></span></div>
+            <ul class="hours">
+              <li><span>Mon – Sat</span><span>10:00 – 19:00</span></li>
+              <li><span>Sunday</span><span class="closed">Closed</span></li>
+            </ul>
+          </div>
+          <iframe class="locate__map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=295+Clare+St+London+E2+9HD&output=embed"
+            title="Map showing MWorks at 295 Clare St, London E2 9HD"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <div>
+          <img class="footer__logo-img" src="assets/logo-white.png" alt="MWorks UK" />
+          <p class="footer__tag">Independent MOT centre, servicing garage and bodyshop on Clare St, East London E2.</p>
+        </div>
+        <div><h4>Visit</h4><ul><li>290 &amp; 295 Clare St</li><li>London E2 9HD</li><li>Mon–Sat 10am–7pm</li></ul></div>
+        <div><h4>Pages</h4><ul><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Get in touch</h4><ul><li><a href="tel:+447595596851">07595 596851</a></li><li><a href="tel:+447415092975">07415 092975</a></li><li><a href="mailto:info@mworksuk.co.uk">info@mworksuk.co.uk</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">© <span id="year">2026</span> MWorks UK. Site by <a href="https://web-lift.co.uk">Web Lift</a>.</div>
+    </div>
+  </footer>
+
+  <script src="../../../kit/reveal.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>

@@ -1,40 +1,58 @@
 /* ============================================================
-   G.S GARAGE — prospect mockup · component + brand layer
-   Foundation (type, spacing, motion) comes from
-   ../../../kit/tokens.css + base.css. We retune the palette to
-   THEIR brand (the blue on their sign) and keep things simple,
-   photo-led and garage-honest. No hardcoded colours in
-   components — everything routes through var() tokens.
+   _DEMO-GARAGE — anonymous showcase demo · component layer
+   A de-branded clone of the garage mockup, safe to show any
+   local prospect. Foundation (type, spacing, motion, colour)
+   comes from ../../../kit/tokens.css + base.css — we DON'T override
+   the brand palette here, so it wears the neutral Web Lift blue.
+   Real photos are replaced with grey "your photo here" blocks.
    ============================================================ */
 
-/* --- Brand override: GS Garage blue (from their signage) on white --- */
+/* Map the two dark-surface helpers onto kit navy tokens
+   (booking + footer backgrounds). No brand-colour overrides. */
 :root {
-  --color-royal:    #1F5C97;   /* PRIMARY — their sign blue (CTAs, links) */
-  --color-royal-dk: #164472;   /* hover */
-  --color-navy:     #16293A;   /* dark slate-blue — dark sections / headings */
-  --color-soft:     #8FC0EE;   /* light blue for footer links on dark */
-  --color-bg:       #F4F6F8;   /* clean cool-grey page background */
-  --color-line:     #E2E7EC;   /* hairline */
-  --color-maroon:   #16293A;   /* announcement bar → dark slate-blue */
-  --gs-dark:        #16293A;   /* deepest section colour (hero overlay, footer) */
-  --gs-dark-2:      #1E384D;   /* raised dark surface */
+  --gs-dark:   var(--color-navy);
+  --gs-dark-2: var(--color-navy-2);
 }
 
 /* light muted text helper for dark backgrounds */
 .muted-light { color: rgba(255,255,255,0.65); }
 
 /* ============================================================
-   HERO — real workshop photo + dark blue overlay
+   GREY PLACEHOLDER BLOCK — stands in for any image slot.
+   Reads as "your photo goes here", not a real business.
+   ============================================================ */
+.ph-block {
+  display: flex; align-items: center; justify-content: center;
+  background:
+    repeating-linear-gradient(135deg, #eef1f6 0 14px, #e7ebf2 14px 28px);
+  border: 1.5px dashed #c2cbdb;
+  color: #8a93a8;
+}
+.ph-block span {
+  font-size: var(--fs-small); font-weight: var(--fw-semi);
+  letter-spacing: 0.04em; text-transform: uppercase; text-align: center;
+  padding: var(--space-3) var(--space-4);
+}
+
+/* Small corner tag, used over the hero gradient */
+.ph-tag {
+  position: absolute; top: var(--space-4); right: var(--space-4); z-index: 6;
+  background: rgba(255,255,255,0.14); color: rgba(255,255,255,0.9);
+  font-size: var(--fs-small); font-weight: var(--fw-semi);
+  padding: var(--space-2) var(--space-4); border-radius: var(--radius-pill);
+  border: 1px solid rgba(255,255,255,0.25); backdrop-filter: blur(4px);
+}
+
+/* ============================================================
+   HERO — neutral navy gradient (was a real workshop photo)
    ============================================================ */
 .gs-hero {
   position: relative;
-  background:
-    linear-gradient(180deg, rgba(22,41,58,0.78) 0%, rgba(22,41,58,0.70) 55%, rgba(22,41,58,0.88) 100%),
-    url("assets/workshop-4.jpg") center 60% / cover no-repeat;
+  background: var(--grad-deep);
   color: #fff;
 }
 
-/* Nav (transparent, over the photo) */
+/* Nav (transparent, over the gradient) */
 .nav--gs {
   position: relative; z-index: 5; background: transparent; border-radius: 0;
   border-bottom: 1px solid rgba(255,255,255,0.14);
@@ -66,9 +84,9 @@
 }
 .gs-hero__rating {
   display: inline-flex; align-items: center; gap: var(--space-3);
-  margin: 0 0 var(--space-6); font-size: 1.05rem;
+  margin: 0 0 var(--space-6); font-size: 1.05rem; color: rgba(255,255,255,0.85);
 }
-.gs-hero__rating strong { font-size: 1.25rem; }
+.gs-hero__rating .stars { color: var(--color-gold, #FBB014); }
 .gs-hero__cta { display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap; }
 
 /* ============================================================
@@ -95,7 +113,6 @@
   display: inline-flex; align-items: baseline; gap: var(--space-3);
   margin-bottom: var(--space-3); flex-wrap: wrap; justify-content: center;
 }
-.gs-reviews__num { font-size: var(--fs-price); font-weight: var(--fw-black); color: var(--color-royal); line-height: 1; }
 .gs-reviews__score .stars { font-size: 1.5rem; }
 .gs-reviews__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
 .review { display: flex; flex-direction: column; gap: var(--space-3); }
@@ -113,12 +130,11 @@
 .svc p { color: var(--color-muted); margin: 0; }
 
 /* ============================================================
-   GALLERY — real workshop photos
+   GALLERY — grey placeholder tiles (real photos drop in here)
    ============================================================ */
 .gs-gallery__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
-.gs-shot { margin: 0; border-radius: var(--radius-card); overflow: hidden; border: 1px solid var(--color-line); box-shadow: var(--shadow-soft); background: var(--color-navy); }
-.gs-shot img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; transition: transform var(--dur) var(--ease); }
-.gs-shot:hover img { transform: scale(1.04); }
+.gs-shot { margin: 0; border-radius: var(--radius-card); overflow: hidden; }
+.gs-shot.ph-block { aspect-ratio: 4 / 3; }
 
 /* ============================================================
    LOCATION & HOURS
@@ -136,9 +152,7 @@
 .gs-location__cta { display: flex; gap: var(--space-3); flex-wrap: wrap; }
 .gs-location__map {
   border-radius: var(--radius-card); overflow: hidden; min-height: 340px;
-  border: 1px solid var(--color-line); box-shadow: var(--shadow-soft);
 }
-.gs-location__map iframe { width: 100%; height: 100%; min-height: 340px; border: 0; display: block; }
 
 /* ============================================================
    BOOKING
